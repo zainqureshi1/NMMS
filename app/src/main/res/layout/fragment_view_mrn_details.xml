@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragments.ViewMRNDetails">
+
+    <ScrollView
+        android:id="@+id/scrollViewMilkMeasurements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutMilkMeasurements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/mrnDetailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/silver_blue"
+        android:padding="@dimen/padding_tiny_upper"
+        android:baselineAligned="true">
+
+        <TextView
+            android:id="@+id/textViewMRNDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:text="@string/mrn_num"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textViewSelectedMRNDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".8"
+            android:hint="@string/selected_mrn"
+            android:textColorHint="@color/dark_gray"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dateTimeDetailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/silver_blue"
+        android:padding="@dimen/padding_tiny_upper">
+
+        <TextView
+            android:id="@+id/textViewDateDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/date"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_weight=".2" />
+
+        <TextView
+            android:id="@+id/textViewDisplayDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/dd_mm_yyyy"
+            android:textColorHint="@color/dark_gray"
+            android:textColor="@color/black"
+            android:layout_weight=".3" />
+
+        <TextView
+            android:id="@+id/textViewTimeDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/time"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_weight=".2" />
+
+        <TextView
+            android:id="@+id/textViewDisplayTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/hr_min_sec"
+            android:textColorHint="@color/dark_gray"
+            android:textColor="@color/black"
+            android:layout_weight=".3" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/locationDetailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/silver_blue"
+        android:padding="@dimen/padding_tiny_upper">
+
+        <TextView
+            android:id="@+id/textViewLocationDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:text="@string/location"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textViewSelectedLocationDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".8"
+            android:hint="@string/selected_location"
+            android:textColorHint="@color/dark_gray"
+            android:textColor="@color/black"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/regionAndShiftLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/silver_blue"
+        android:padding="@dimen/padding_tiny_upper">
+
+        <TextView
+            android:id="@+id/textViewRegionDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:text="@string/region"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textViewSelectedRegionDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:hint="@string/selected_region"
+            android:textColorHint="@color/dark_gray"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/textViewShiftDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/shift"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_weight=".2" />
+
+        <TextView
+            android:id="@+id/textViewSelectedShiftDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/selected_shift"
+            android:textColorHint="@color/dark_gray"
+            android:textColor="@color/black"
+            android:layout_weight=".3" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewSupplierInformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/supplier_information"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/black"
+        android:layout_margin="@dimen/margin_two_minute"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/codeAndTypeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/silver_blue"
+        android:padding="@dimen/padding_tiny_upper">
+
+        <TextView
+            android:id="@+id/textViewCodeDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:text="@string/code"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textViewSelectedCodeDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:hint="@string/supplier_code"
+            android:textColorHint="@color/dark_gray"
+            android:textColor="@color/black"
+            android:padding="@dimen/padding_tiny"/>
+
+
+            <TextView
+                android:id="@+id/textViewTypeDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:text="@string/supplier_type"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textViewSelectedTypeDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:hint="@string/selected_supplier_type"
+                android:textColorHint="@color/dark_gray"
+                android:textColor="@color/black" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/supplierNameDetailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/silver_blue"
+        android:padding="@dimen/padding_tiny_upper">
+
+        <TextView
+            android:id="@+id/textViewSupplierNameDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:text="@string/supplier_name"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textViewSelectedSupplierNameDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".8"
+            android:hint="@string/selected_supplier_name"
+            android:textColorHint="@color/dark_gray"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cnicDetailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/silver_blue"
+        android:padding="@dimen/padding_tiny_upper">
+
+        <TextView
+            android:id="@+id/textViewCNICDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:text="@string/cnic"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textViewSelectedCNICDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".8"
+            android:hint="@string/selected_cnic"
+            android:textColorHint="@color/dark_gray"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewMilkQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/milk_quantity"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/black"
+        android:layout_margin="@dimen/margin_two_minute"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/volumeAndFatLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/silver_blue"
+        android:padding="@dimen/padding_tiny_upper">
+
+        <TextView
+            android:id="@+id/textViewVolumeDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:text="@string/volume"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textViewSelectedVolume"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:hint="@string/selected_volume"
+            android:textColorHint="@color/dark_gray"
+            android:textColor="@color/black"
+            android:padding="@dimen/padding_tiny"/>
+
+        <TextView
+            android:id="@+id/textViewFatDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:text="@string/fat"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textViewSelectedFat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:hint="@string/selected_fat"
+            android:textColorHint="@color/dark_gray"
+            android:textColor="@color/black"
+            android:padding="@dimen/padding_tiny"/>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lrReadingAndSNFLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/silver_blue"
+        android:padding="@dimen/padding_tiny_upper">
+
+        <TextView
+            android:id="@+id/textViewLRReadingDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:text="@string/lr"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/editTextSelectedLR"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:hint="@string/selected_lr"
+            android:textColorHint="@color/dark_gray"
+            android:textColor="@color/black"
+            android:padding="@dimen/padding_tiny"/>
+
+        <TextView
+            android:id="@+id/textViewSNFDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:text="@string/snf"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/editTextSelectedSNF"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:hint="@string/selected_snf"
+            android:textColorHint="@color/dark_gray"
+            android:textColor="@color/black"
+            android:padding="@dimen/padding_tiny"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/totalSolidsAndVol13TSLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/silver_blue"
+        android:padding="@dimen/padding_tiny_upper">
+
+        <TextView
+            android:id="@+id/textViewTSDetail"
+            android:layout_width="0dp"
+            android:layout_weight=".3"
+            android:layout_height="wrap_content"
+            android:text="@string/ts"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/textViewSelectedTS"
+            android:layout_width="0dp"
+            android:layout_weight=".2"
+            android:layout_height="wrap_content"
+            android:hint="@string/selected_ts"
+            android:textColorHint="@color/dark_gray"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/textViewVol13TS"
+            android:layout_width="0dp"
+            android:layout_weight=".3"
+            android:layout_height="wrap_content"
+            android:text="@string/vol_at_13_ts"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/textViewSelectedVol13TS"
+            android:layout_width="0dp"
+            android:layout_weight=".2"
+            android:layout_height="wrap_content"
+            android:hint="@string/selected_vol_ts"
+            android:textColorHint="@color/dark_gray"
+            android:textColor="@color/black" />
+        </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewMilkQuality"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/milk_quality"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/black"
+        android:layout_margin="@dimen/margin_two_minute"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/TempAndFormalinLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/silver_blue"
+        android:padding="@dimen/padding_tiny_upper">
+
+        <TextView
+            android:id="@+id/textViewTempDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:text="@string/temperature"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textViewSelectedTemp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:hint="@string/selected_temp"
+            android:textColorHint="@color/dark_gray"
+            android:textColor="@color/black"
+            android:padding="@dimen/padding_tiny"/>
+
+        <TextView
+            android:id="@+id/textViewFormalinDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:text="@string/formalin"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textViewSelectedFormalin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:hint="@string/selected_formalin"
+            android:textColorHint="@color/dark_gray"
+            android:textColor="@color/black"
+            android:padding="@dimen/padding_tiny"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/organolAndAPTLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/silver_blue"
+        android:padding="@dimen/padding_tiny_upper">
+
+        <TextView
+            android:id="@+id/textViewOrganolDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:text="@string/organol_in_out"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/editTextSelectedOrganol"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:hint="@string/selected_organol"
+            android:textColorHint="@color/dark_gray"
+            android:textColor="@color/black"
+            android:padding="@dimen/padding_tiny"/>
+
+        <TextView
+            android:id="@+id/textViewAPTDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:text="@string/apt"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/editTextSelectedAPT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:hint="@string/selected_apt"
+            android:textColorHint="@color/dark_gray"
+            android:textColor="@color/black"
+            android:padding="@dimen/padding_tiny"/>
+
+    </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

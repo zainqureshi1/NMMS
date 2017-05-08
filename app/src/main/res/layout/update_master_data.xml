@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_plain"
+    tools:context=".activities.UpdateMasterData">
+
+    <include layout="@layout/title_layout"
+        android:id="@+id/includeHeader"/>
+
+    <TextView
+        android:id="@+id/PageTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/update_master_data"
+        android:textSize="@dimen/text_size_medium_upper"
+        android:textColor="@color/white"
+        android:layout_margin="@dimen/margin_tiny"
+        android:layout_below="@id/includeHeader"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/masterDataFirstLayOut"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_tiny_upper"
+        android:layout_below="@id/PageTitle"
+        android:layout_marginLeft="@dimen/margin_tiny"
+        android:layout_marginRight="@dimen/margin_tiny"
+        android:layout_marginTop="@dimen/margin_tiny"
+        android:layout_above="@+id/masterDataSecondLayOut">
+
+        <LinearLayout
+          android:id="@+id/regionLayout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:background="@color/silver_blue"
+          android:padding="@dimen/padding_small" >
+
+          <TextView
+            android:id="@+id/textViewRegion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight=".3"
+            android:text="@string/region"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textViewSelectedRegion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".7"
+                android:hint="@string/selected_region"
+                android:textColorHint="@color/dark_gray"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lastUpdateLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/silver_blue"
+            android:padding="@dimen/padding_small"
+            android:layout_below="@id/regionLayout">
+
+            <TextView
+                android:id="@+id/textViewLastUpdated"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="@string/last_updated"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textViewLastUpdatedDateTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".7"
+                android:hint="@string/lastupdated_datetime"
+                android:textColorHint="@color/dark_gray"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/textViewCheckUpdates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/check_updates"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/margin_two_minute"
+            android:layout_below="@id/lastUpdateLayout"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/dateTimeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/silver_blue"
+            android:padding="@dimen/padding_small"
+            android:layout_below="@id/textViewCheckUpdates">
+
+            <TextView
+                android:id="@+id/textViewUpdatingDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/date"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_weight=".2" />
+
+            <TextView
+                android:id="@+id/textViewDisplayDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/dd_mm_yyyy"
+                android:textColorHint="@color/dark_gray"
+                android:textColor="@color/black"
+                android:layout_weight=".3" />
+
+            <TextView
+                android:id="@+id/textViewUpdatingTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/time"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_weight=".2" />
+
+            <TextView
+                android:id="@+id/textViewDisplayTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/hr_min_sec"
+                android:textColorHint="@color/dark_gray"
+                android:textColor="@color/black"
+                android:layout_weight=".3" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/updateButtonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/silver_blue"
+            android:layout_below="@id/dateTimeLayout">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/masterDataUpdateButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/update_button"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_medium"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_tiny"
+                android:layout_marginLeft="@dimen/margin_xxhuge"
+                android:layout_marginRight="@dimen/margin_xxhuge"
+                android:background="@drawable/black_borders"
+                android:textAllCaps="false"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/updatingInformation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            android:layout_below="@+id/updateButtonLayout">
+
+            <TextView
+            android:id="@+id/textViewUpdateInformation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/update_info"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/margin_two_minute"
+            android:textStyle="bold" />
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/silver_blue"
+            android:padding="@dimen/padding_small" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dont_close"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progress="30" />
+
+        </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/masterDataSecondLayOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_brown"
+        android:layout_marginLeft="@dimen/margin_tiny"
+        android:layout_marginRight="@dimen/margin_tiny"
+        android:layout_marginBottom="@dimen/margin_tiny"
+        android:layout_alignParentBottom="true">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/masterDataCancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel_button"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_medium"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/margin_small"
+            android:background="@color/gray_purple"
+            android:textAllCaps="false"/>
+    </RelativeLayout>
+
+</RelativeLayout>

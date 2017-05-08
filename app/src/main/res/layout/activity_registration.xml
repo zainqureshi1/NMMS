@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_nmms"
+    tools:context=".activities.Registration">
+
+    <ScrollView
+        android:id="@+id/scrollViewRegistration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonRegister"
+        android:layout_marginTop="@dimen/margin_xxhuge"
+        android:background="@color/opaque">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingRight="@dimen/margin_medium"
+            android:paddingLeft="@dimen/margin_medium" >
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/editTextUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/user_name"
+            android:textColorHint="@color/dark_silver"
+            android:textColor="@color/black"
+            android:padding="@dimen/padding_tiny_upper"
+            android:textSize="@dimen/text_size_medium"
+            android:background="@drawable/solid_borders"
+            android:layout_marginTop="@dimen/margin_medium"
+           />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textColorHint="@color/dark_silver"
+            android:textColor="@color/black"
+            android:padding="@dimen/padding_tiny_upper"
+            android:textSize="@dimen/text_size_medium"
+            android:background="@drawable/solid_borders"
+            android:layout_marginTop="@dimen/margin_small"
+            />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/editTextMobileNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/mobile_number"
+            android:inputType="numberSigned"
+            android:textColorHint="@color/dark_silver"
+            android:textColor="@color/black"
+            android:padding="@dimen/padding_tiny_upper"
+            android:textSize="@dimen/text_size_medium"
+            android:background="@drawable/solid_borders"
+            android:layout_marginTop="@dimen/margin_small"
+            />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/editTextInventoryNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/inventory_number"
+            android:inputType="number"
+            android:textColorHint="@color/dark_silver"
+            android:textColor="@color/black"
+            android:padding="@dimen/padding_tiny_upper"
+            android:textSize="@dimen/text_size_medium"
+            android:background="@drawable/solid_borders"
+            android:layout_marginTop="@dimen/margin_small"
+            />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/editTextDeviceName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/device_name"
+            android:inputType="text"
+            android:textColorHint="@color/dark_silver"
+            android:textColor="@color/black"
+            android:padding="@dimen/padding_tiny_upper"
+            android:textSize="@dimen/text_size_medium"
+            android:background="@drawable/solid_borders"
+            android:layout_marginTop="@dimen/margin_small" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewBottomText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/bottom_text"
+            android:textColorHint="@color/white"
+            android:textColor="@color/black"
+            android:padding="@dimen/padding_tiny_upper"
+            android:textSize="@dimen/text_size_medium"
+            android:layout_marginTop="@dimen/margin_small" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/buttonRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/padding_medium"
+        android:paddingRight="@dimen/padding_medium"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:text="@string/register_button"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_medium"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/margin_huge"
+        android:layout_above="@+id/viewLogo"
+        android:background="@drawable/borders"
+        android:textAllCaps="false" />
+
+    <View
+        android:id="@+id/viewLogo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_xxhuge"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/logo_nestle" />
+
+</RelativeLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_plain"
+    tools:context=".activities.HomePage" >
+
+    <include layout="@layout/title_layout"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/buttonManageMRNs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/manage_mrns"
+        android:background="@drawable/rounded_borders"
+        android:textColor="@color/ligh_black"
+        android:textAlignment="textStart"
+        android:layout_gravity="start"
+        android:padding="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_huge"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_large"
+        android:onClick="onManageMRNsButtonClick"
+        android:textSize="@dimen/text_size_medium"
+        android:textAllCaps="false" />
+
+
+    <LinearLayout
+        android:id="@+id/manageMRNsInnerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_huge"
+        android:layout_marginRight="@dimen/margin_huge"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/buttonCreateMRN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/create_mrn"
+            android:background="@color/light_cgreen"
+            android:textColor="@color/ligh_black"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small"
+            android:textSize="@dimen/text_size_medium"
+            android:onClick="onCreateMRNButtonClick"
+            android:drawableRight="@mipmap/create_mrn_icon"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/buttonViewMRNs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/view_mrn"
+            android:background="@color/light_cgreen"
+            android:textColor="@color/ligh_black"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small"
+            android:layout_marginTop="@dimen/margin_two_minute"
+            android:textSize="@dimen/text_size_medium"
+            android:onClick="onViewMRNsButtonClick"
+            android:drawableRight="@mipmap/view_mrn_icon"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/buttonPurchaseSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/purchase_summary"
+            android:background="@color/light_cgreen"
+            android:textColor="@color/ligh_black"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small"
+            android:layout_marginTop="@dimen/margin_two_minute"
+            android:textSize="@dimen/text_size_medium"
+            android:onClick="onDPSButtonClick"
+            android:drawableRight="@mipmap/purchase_summary_icon"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/buttonTransferMilkToMT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/transfer_milk"
+            android:background="@color/light_cgreen"
+            android:textColor="@color/ligh_black"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small"
+            android:layout_marginTop="@dimen/margin_two_minute"
+            android:textSize="@dimen/text_size_medium"
+            android:onClick="onTransferMilkButtonClick"
+            android:drawableRight="@mipmap/transfer_milk_icon"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/buttonEndOfDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/end_of_day"
+            android:background="@color/light_cgreen"
+            android:textColor="@color/ligh_black"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small"
+            android:layout_marginTop="@dimen/margin_two_minute"
+            android:textSize="@dimen/text_size_medium"
+            android:onClick="onEndOfDayButtonClick"
+            android:drawableRight="@mipmap/end_day_icon"
+            android:textAllCaps="false" />
+
+
+    </LinearLayout>
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/buttonReceiveMilk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/receive_milk"
+        android:background="@drawable/rounded_borders"
+        android:textColor="@color/ligh_black"
+        android:textAlignment="textStart"
+        android:layout_gravity="start"
+        android:padding="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_large"
+        android:textSize="@dimen/text_size_medium"
+        android:textAllCaps="false"/>
+
+
+</LinearLayout>

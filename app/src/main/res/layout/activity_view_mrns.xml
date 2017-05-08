@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_plain"
+    tools:context=".activities.ViewMRNs">
+
+    <include layout="@layout/title_layout"
+        android:id="@+id/includeHeader"/>
+
+    <TextView
+        android:id="@+id/pageTitleViewMRNDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_mrn_details"
+        android:textSize="@dimen/text_size_medium_upper"
+        android:textColor="@color/white"
+        android:layout_margin="@dimen/margin_tiny"
+        android:layout_below="@id/includeHeader"
+        android:textStyle="bold" />
+
+
+    <RelativeLayout
+        android:id="@+id/masterDataFirstLayOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="@dimen/padding_tiny_upper"
+        android:layout_below="@id/pageTitleViewMRNDetails"
+        android:layout_above="@+id/viewMRNDetailsBottomButtonsLayOut"
+        android:layout_marginLeft="@dimen/margin_tiny"
+        android:layout_marginRight="@dimen/margin_tiny"
+        android:layout_marginTop="@dimen/margin_tiny" >
+
+        <FrameLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/fragmentContainerViewMRNDetails"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/viewMRNDetailsBottomButtonsLayOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_brown"
+        android:padding="@dimen/padding_tiny_upper"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/margin_tiny"
+        android:layout_marginRight="@dimen/margin_tiny"
+        android:layout_marginBottom="@dimen/margin_tiny">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/viewMRNDetailsCancelButton"
+            android:layout_width="0dp"
+            android:layout_weight=".3"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel_button"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_medium"
+            android:background="@color/gray_purple"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:textAllCaps="false" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/viewMRNDetailsBackButton"
+            android:layout_width="0dp"
+            android:layout_weight=".3"
+            android:layout_height="wrap_content"
+            android:text="@string/back_button"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_medium"
+            android:background="@color/gray_purple"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:textAllCaps="false" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/viewMRNDetailsUpdateButton"
+            android:layout_width="0dp"
+            android:layout_weight=".3"
+            android:layout_height="wrap_content"
+            android:text="@string/update_button"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_medium"
+            android:background="@color/gray_purple"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:textAllCaps="false" />
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

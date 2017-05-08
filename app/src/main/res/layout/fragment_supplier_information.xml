@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".fragments.SupplierInformation">
+
+    <ScrollView
+        android:id="@+id/scrollViewMilkMeasurements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutMilkMeasurements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/mrnNumLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/silver_blue"
+            android:padding="@dimen/padding_tiny_upper"
+            android:baselineAligned="true">
+
+            <TextView
+                android:id="@+id/textViewMRN"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:text="@string/mrn_num"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textViewSelectedMRN"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".8"
+                android:hint="@string/selected_mrn"
+                android:textColorHint="@color/dark_gray"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dateTimeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/silver_blue"
+            android:padding="@dimen/padding_tiny_upper">
+
+            <TextView
+                android:id="@+id/textViewDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/date"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_weight=".2" />
+
+            <TextView
+                android:id="@+id/textViewDisplayDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/dd_mm_yyyy"
+                android:textColorHint="@color/dark_gray"
+                android:textColor="@color/black"
+                android:layout_weight=".3" />
+
+            <TextView
+                android:id="@+id/textViewUpdatingTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/time"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_weight=".2" />
+
+            <TextView
+                android:id="@+id/textViewDisplayTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/hr_min_sec"
+                android:textColorHint="@color/dark_gray"
+                android:textColor="@color/black"
+                android:layout_weight=".3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/locationLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/silver_blue"
+            android:padding="@dimen/padding_tiny_upper">
+
+            <TextView
+                android:id="@+id/textViewLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:text="@string/location"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textViewSelectedLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".8"
+                android:hint="@string/selected_location"
+                android:textColorHint="@color/dark_gray"
+                android:textColor="@color/black"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/regionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/silver_blue"
+            android:padding="@dimen/padding_tiny_upper">
+
+            <TextView
+                android:id="@+id/textViewRegion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:text="@string/region"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textViewSelectedRegion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".8"
+                android:hint="@string/selected_region"
+                android:textColorHint="@color/dark_gray"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/textViewSupplierInformation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/supplier_information"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/margin_two_minute"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/codeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/silver_blue"
+            android:padding="@dimen/padding_tiny_upper">
+
+            <TextView
+                android:id="@+id/textViewCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="@string/code"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/editTextSearchSupplierCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:hint="@string/search_code"
+                android:textColorHint="@color/gray_purple"
+                android:background="@color/white"
+                android:textColor="@color/black"
+                android:padding="@dimen/padding_tiny"/>
+
+            <ImageButton
+                android:id="@+id/supplierCodeSearchButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:background="@drawable/search_icon"
+                android:padding="@dimen/padding_tiny_upper"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/supplierNameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/silver_blue"
+            android:padding="@dimen/padding_tiny_upper">
+
+            <TextView
+                android:id="@+id/textViewSupplierName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="@string/supplier_name"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textViewSelectedSupplierName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".7"
+                android:hint="@string/selected_supplier_name"
+                android:textColorHint="@color/dark_gray"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/supplierFatherNameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/silver_blue"
+            android:padding="@dimen/padding_tiny_upper">
+
+            <TextView
+                android:id="@+id/textViewFatherName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="@string/father_name"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textViewSelectedFatherName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".7"
+                android:hint="@string/selected_father_name"
+                android:textColorHint="@color/dark_gray"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cnicLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/silver_blue"
+            android:padding="@dimen/padding_tiny_upper">
+
+            <TextView
+                android:id="@+id/textViewCNIC"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="@string/cnic"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textViewSelectedCNIC"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".7"
+                android:hint="@string/selected_cnic"
+                android:textColorHint="@color/dark_gray"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/supplierTypeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/silver_blue"
+            android:padding="@dimen/padding_tiny_upper">
+
+            <TextView
+                android:id="@+id/textViewType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="@string/supplier_type"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textViewSelectedType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".7"
+                android:hint="@string/selected_supplier_type"
+                android:textColorHint="@color/dark_gray"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+    </LinearLayout>
+
