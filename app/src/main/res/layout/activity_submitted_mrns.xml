@@ -5,16 +5,159 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_plain"
-    tools:context=".activities.CreateMRN">
+    tools:context=".activities.SubmittedMRNs">
 
     <include layout="@layout/title_layout"
         android:id="@+id/includeHeader"/>
 
-    <LinearLayout
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollViewSelectShift"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_below="@+id/includeHeader"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_tiny_upper">
 
+        <TextView
+            android:id="@+id/textViewMorning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/morning"
+            android:textSize="@dimen/text_size_xhuge"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_small"
+            android:textIsSelectable="true"/>
+
+        <TextView
+            android:id="@+id/textViewEvening"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/evening"
+            android:textSize="@dimen/text_size_xhuge"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:textIsSelectable="true" />
     </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/mrnTitlesHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_tiny_upper"
+        android:layout_marginLeft="@dimen/margin_tiny_upper"
+        android:layout_marginRight="@dimen/margin_tiny_upper"
+        android:background="@color/blue"
+        android:layout_below="@id/horizontalScrollViewSelectShift">
+
+        <TextView
+            android:id="@+id/textViewMRNNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/selected_mrn"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/margin_two_minute"
+            android:layout_marginRight="@dimen/margin_two_minute"/>
+
+        <TextView
+            android:id="@+id/textViewSupplier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/supplier"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"/>
+
+        <TextView
+            android:id="@+id/textViewVol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/selected_volume"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"/>
+
+        <TextView
+            android:id="@+id/textViewFat_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/selected_fat"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"/>
+
+        <TextView
+            android:id="@+id/textViewLR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/selected_lr"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"/>
+
+        <TextView
+            android:id="@+id/textViewStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/status_mrn"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark_skin"
+        android:layout_below="@+id/mrnTitlesHeader"
+        android:layout_above="@+id/submittedMRNsBottomButtonsLayout"
+        android:layout_marginLeft="@dimen/margin_tiny_upper"
+        android:layout_marginRight="@dimen/margin_tiny_upper">
+
+        <ListView
+            android:id="@+id/submittedMRNsListView"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/submittedMRNsBottomButtonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_brown"
+        android:padding="@dimen/padding_tiny_upper"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/margin_tiny_upper"
+        android:layout_marginRight="@dimen/margin_tiny_upper"
+        android:layout_marginTop="@dimen/margin_tiny">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/submittedMRNsBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back_button"
+            android:textColor="@color/black"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/text_size_medium"
+            android:background="@color/gray_purple"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:textAllCaps="false" />
+
+
+    </RelativeLayout>
 
     </RelativeLayout>

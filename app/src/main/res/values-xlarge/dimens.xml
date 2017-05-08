@@ -14,6 +14,7 @@
     <dimen name="margin_minute">2dp</dimen>
     <dimen name="margin_two_minute">4dp</dimen>
     <dimen name="margin_tiny">8dp</dimen>
+    <dimen name="margin_tiny_upper">14dp</dimen>
     <dimen name="margin_small">20dp</dimen>
     <dimen name="margin_medium">40dp</dimen>
     <dimen name="margin_large">60dp</dimen>
@@ -42,5 +43,6 @@
     <dimen name="text_size_large">48sp</dimen>
     <dimen name="text_size_very_large">62sp</dimen>
     <dimen name="text_size_huge">78sp</dimen>
+    <dimen name="text_size_xhuge">101sp</dimen>
 
 </resources>
