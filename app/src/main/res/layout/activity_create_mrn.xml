@@ -90,9 +90,9 @@
             android:layout_weight=".3"
             android:layout_height="wrap_content"
             android:text="@string/next_button"
-            android:textColor="@color/black"
+            android:textColor="@color/dark_skin"
             android:textSize="@dimen/text_size_medium"
-            android:background="@color/gray_purple"
+            android:background="@drawable/dark_skin_borders"
             android:layout_marginLeft="@dimen/margin_medium"
             android:layout_marginRight="@dimen/margin_medium"
             android:textAllCaps="false" />

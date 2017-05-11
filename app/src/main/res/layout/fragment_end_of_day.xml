@@ -26,7 +26,9 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:background="@color/silver_blue"
-                android:padding="@dimen/padding_tiny_upper">
+                android:paddingLeft="@dimen/padding_tiny_upper"
+                android:paddingRight="@dimen/padding_tiny_upper"
+                android:paddingTop="@dimen/padding_tiny_upper">
 
                 <TextView
                     android:id="@+id/textViewSheetNumEOD"
@@ -57,7 +59,9 @@
                 android:background="@color/silver_blue"
                 android:baselineAligned="true"
                 android:orientation="horizontal"
-                android:padding="@dimen/padding_tiny_upper">
+                android:paddingLeft="@dimen/padding_tiny_upper"
+                android:paddingRight="@dimen/padding_tiny_upper"
+                android:paddingTop="@dimen/padding_minute">
 
                 <TextView
                     android:id="@+id/textViewDateEOD"
@@ -85,7 +89,9 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:background="@color/silver_blue"
-                android:padding="@dimen/padding_tiny_upper">
+                android:paddingLeft="@dimen/padding_tiny_upper"
+                android:paddingRight="@dimen/padding_tiny_upper"
+                android:paddingTop="@dimen/padding_minute">
 
 
                 <TextView
@@ -116,7 +122,9 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:background="@color/silver_blue"
-                android:padding="@dimen/padding_tiny_upper">
+                android:paddingLeft="@dimen/padding_tiny_upper"
+                android:paddingRight="@dimen/padding_tiny_upper"
+                android:paddingTop="@dimen/padding_minute">
 
 
                 <TextView
@@ -147,7 +155,10 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:background="@color/silver_blue"
-                android:padding="@dimen/padding_tiny_upper">
+                android:paddingLeft="@dimen/padding_tiny_upper"
+                android:paddingRight="@dimen/padding_tiny_upper"
+                android:paddingTop="@dimen/margin_minute"
+                android:paddingBottom="@dimen/padding_tiny_upper">
 
 
                 <TextView
@@ -199,8 +210,7 @@
                         android:layout_weight="3"
                         android:layout_height="match_parent"
                         android:text="@string/yes"
-                        android:textColor="@color/black"
-                        android:onClick="onRadioButtonClick"/>
+                        android:textColor="@color/black" />
 
                     <RadioButton
                         android:id="@+id/radioButtonNo"
@@ -208,8 +218,7 @@
                         android:layout_weight="7"
                         android:layout_height="match_parent"
                         android:text="@string/no"
-                        android:textColor="@color/black"
-                        android:onClick="onRadioButtonClick"/>
+                        android:textColor="@color/black" />
 
                 </RadioGroup>
 

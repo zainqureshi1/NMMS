@@ -144,7 +144,10 @@
     <string name="snf_kg">SNF(kg):</string>
     <string name="selected_snf_kg">SNF_KG</string>
     <string name="transfer_milk_to_mt">Transfer Milk to MT</string>
-    <string name="lr_alert_text">LR Range = 14"-"35.50</string>
+    <string name="vol_alert_text">Vol = .5"-"99999999.50</string>
+    <string name="fat_alert_text">Fat = 2"-"9.99</string>
+    <string name="lr_alert_text">LR  = 14"-"35.50</string>
+    <string name="temp_alert_text">Temp = 4"-"40</string>
 
     <string name="sheet_num">Sheet#:</string>
     <string name="selected_sheet_num">Sheet#</string>

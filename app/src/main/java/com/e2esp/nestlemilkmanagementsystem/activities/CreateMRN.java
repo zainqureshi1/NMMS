@@ -113,6 +113,8 @@ public class CreateMRN extends FragmentActivity {
             transaction.replace(R.id.fragmentContainerCreateMRN, milkMeasurementsFragment);
             transaction.addToBackStack(null);
             transaction.commit();
+            createMRNNextButton.setBackgroundResource(R.color.gray_purple);
+            createMRNNextButton.setTextColor(getResources().getColor(R.color.black));
             counter++;
         }
 
@@ -179,6 +181,8 @@ public class CreateMRN extends FragmentActivity {
             transaction.replace(R.id.fragmentContainerCreateMRN, supplierInfoFragment);
             transaction.addToBackStack(null);
             transaction.commit();
+            createMRNNextButton.setBackgroundResource(R.drawable.dark_skin_borders);
+            createMRNNextButton.setTextColor(getResources().getColor(R.color.dark_skin));
             counter--;
             createMRNBackButton.setVisibility(View.GONE);
         }

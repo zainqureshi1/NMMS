@@ -5,16 +5,22 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.AppCompatButton;
 import android.view.View;
+import android.widget.RadioButton;
 
 import com.e2esp.nestlemilkmanagementsystem.R;
 import com.e2esp.nestlemilkmanagementsystem.fragments.EOD;
+import com.e2esp.nestlemilkmanagementsystem.fragments.EODSummary;
 
 
 public class EndOfDay extends FragmentActivity {
 
     AppCompatButton eodCancelButton, eodBackButton, endOfDayButton;
+    int counter = 1;
+
+    EOD endOfDayFragment = new EOD();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +36,6 @@ public class EndOfDay extends FragmentActivity {
             if (savedInstanceState != null) {
                 return;
             }
-            EOD endOfDayFragment = new EOD();
             endOfDayFragment.setArguments(getIntent().getExtras());
             getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainerEndOfDay, endOfDayFragment).commit();
         }
@@ -95,7 +100,64 @@ public class EndOfDay extends FragmentActivity {
         alertDialog.show();
     }
 
-    private void onEndOfDayBackButtonClick(){}
+    private void onEndOfDayBackButtonClick(){
 
-    private void onEndOfDayButtonClick(){}
+        EOD eodFragment = new EOD();
+        Bundle args = new Bundle();
+        eodFragment.setArguments(args);
+
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragmentContainerEndOfDay, eodFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+        eodBackButton.setVisibility(View.GONE);
+        endOfDayButton.setBackgroundResource(R.drawable.dark_skin_borders);
+        endOfDayButton.setTextColor(getResources().getColor(R.color.dark_skin));
+        counter--;
+    }
+
+    private void onEndOfDayButtonClick() {
+
+        if (counter == 1) {
+            EODSummary eodSummaryFragment = new EODSummary();
+            Bundle args = new Bundle();
+            eodSummaryFragment.setArguments(args);
+
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragmentContainerEndOfDay, eodSummaryFragment);
+            transaction.addToBackStack(null);
+            transaction.commit();
+            eodBackButton.setVisibility(View.VISIBLE);
+            endOfDayButton.setBackgroundResource(R.color.gray_purple);
+            endOfDayButton.setTextColor(getResources().getColor(R.color.black));
+            counter++;
+        }
+
+        else if(counter == 2){
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+            alertDialogBuilder.setTitle("Confirm End of Day");
+            alertDialogBuilder.setMessage("Do you want to end your day?");
+            alertDialogBuilder.setPositiveButton("Yes",
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int id) {
+                            Intent intent = new Intent(EndOfDay.this, HomePage.class);
+                            startActivity(intent);
+                            finish();
+                        }
+                    });
+
+            alertDialogBuilder.setNegativeButton("No",
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int id) {
+                            dialog.dismiss();
+                        }
+                    });
+
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.show();
+        }
+    }
 }
+
