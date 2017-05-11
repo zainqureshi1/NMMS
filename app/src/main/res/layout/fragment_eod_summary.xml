@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".fragments.EOD">
+
+    <ScrollView
+        android:id="@+id/scrollViewEOD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/innerEODSummaryLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/sheetNumEODSummaryLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/silver_blue"
+                android:padding="@dimen/padding_tiny_upper">
+
+                <TextView
+                    android:id="@+id/textViewSheetNumEODSummary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="@string/sheet_num"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textViewSelectedSheetNumEODSummary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".65"
+                    android:hint="@string/selected_sheet_num"
+                    android:textColorHint="@color/dark_gray"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/padding_tiny"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/locationCodeEODSummaryLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/silver_blue"
+                android:padding="@dimen/padding_tiny_upper">
+
+
+                <TextView
+                    android:id="@+id/textViewlocationCodeEODSummary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="@string/location_code"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textViewSelectedlocationCodeEODSummary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".65"
+                    android:hint="@string/selected_location_code"
+                    android:textColorHint="@color/dark_gray"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/padding_tiny"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/locationNameEODSummaryLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/silver_blue"
+                android:padding="@dimen/padding_tiny_upper">
+
+
+                <TextView
+                    android:id="@+id/textViewlocationNameEODSummary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="@string/location_name"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textViewSelectedlocationNameEODSummary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".65"
+                    android:hint="@string/selected_location_name"
+                    android:textColorHint="@color/dark_gray"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/padding_tiny"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/regionEODSummaryLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/silver_blue"
+                android:padding="@dimen/padding_tiny_upper">
+
+
+                <TextView
+                    android:id="@+id/textViewRegionEODSummary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="@string/region"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textViewSelectedRegionEODSummary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".65"
+                    android:hint="@string/selected_region"
+                    android:textColorHint="@color/dark_gray"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/padding_tiny"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewPreviousDayLOM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/previous_day_lom"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/black"
+                android:layout_margin="@dimen/margin_two_minute"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/volumeAndFatPreviousDayLOMLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/silver_blue"
+                android:padding="@dimen/padding_tiny_upper">
+
+                <TextView
+                    android:id="@+id/textViewVolumePreviousDayLOM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="@string/volume"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textViewSelectedVolumePreviousDayLOM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:hint="@string/selected_volume"
+                    android:textColorHint="@color/dark_gray"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/padding_tiny"/>
+
+                <TextView
+                    android:id="@+id/textViewFatPreviousDayLOM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="@string/fat"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textViewSelectedFatPreviousDayLOM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:hint="@string/selected_fat"
+                    android:textColorHint="@color/dark_gray"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/padding_tiny"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/adjustedLRPreviousDayLOMLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/silver_blue"
+                android:padding="@dimen/padding_tiny_upper">
+
+                <TextView
+                    android:id="@+id/textViewAdjustedLRPreviousDayLOM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="@string/adjusted_lr"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textViewSelectedAdjustedLRPreviousDayLOM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".7"
+                    android:hint="@string/selected_lr"
+                    android:textColorHint="@color/dark_gray"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/padding_tiny"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewTodayMilkPurchased"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/today_milk_purchased"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/black"
+                android:layout_margin="@dimen/margin_two_minute"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/volumeAndFatTMPLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/silver_blue"
+                android:padding="@dimen/padding_tiny_upper">
+
+                <TextView
+                    android:id="@+id/textViewVolumeTMP"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="@string/volume"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textViewSelectedVolumeTMP"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:hint="@string/selected_volume"
+                    android:textColorHint="@color/dark_gray"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/padding_tiny"/>
+
+                <TextView
+                    android:id="@+id/textViewFatTMP"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="@string/fat"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textViewSelectedFatTMP"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:hint="@string/selected_fat"
+                    android:textColorHint="@color/dark_gray"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/padding_tiny"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/adjustedLRTMPLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/silver_blue"
+                android:padding="@dimen/padding_tiny_upper">
+
+                <TextView
+                    android:id="@+id/textViewAdjustedLRTMP"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="@string/adjusted_lr"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textViewSelectedAdjustedLRTMP"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".7"
+                    android:hint="@string/selected_lr"
+                    android:textColorHint="@color/dark_gray"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/padding_tiny"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewCurrentDayLOM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/current_day_lom"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/black"
+                android:layout_margin="@dimen/margin_two_minute"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/volumeAndFatCurrentDayLOMLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/silver_blue"
+                android:padding="@dimen/padding_tiny_upper">
+
+                <TextView
+                    android:id="@+id/textViewVolumeCurrentDayLOM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="@string/volume"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textViewSelectedVolumeCurrentDayLOM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:hint="@string/selected_volume"
+                    android:textColorHint="@color/dark_gray"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/padding_tiny"/>
+
+                <TextView
+                    android:id="@+id/textViewFatCurrentDayLOM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="@string/fat"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textViewSelectedFatCurrentDayLOM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:hint="@string/selected_fat"
+                    android:textColorHint="@color/dark_gray"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/padding_tiny"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/adjustedLRCurrentDayLOMLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/silver_blue"
+                android:padding="@dimen/padding_tiny_upper">
+
+                <TextView
+                    android:id="@+id/textViewAdjustedLRCurrentDayLOM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="@string/adjusted_lr"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textViewSelectedAdjustedLRCurrentDayLOM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".7"
+                    android:hint="@string/selected_lr"
+                    android:textColorHint="@color/dark_gray"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/padding_tiny"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

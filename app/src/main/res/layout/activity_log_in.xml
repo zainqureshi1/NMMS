@@ -55,7 +55,7 @@
         android:layout_marginTop="@dimen/margin_large"
         android:layout_gravity="center_horizontal"
         android:background="@color/sky_blue"
-        android:foreground="@drawable/borders"
+        android:foreground="@drawable/white_borders"
         android:textAllCaps="false"/>
 
     </LinearLayout>

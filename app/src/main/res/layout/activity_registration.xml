@@ -119,7 +119,7 @@
         android:textStyle="bold"
         android:layout_marginTop="@dimen/margin_huge"
         android:layout_above="@+id/viewLogo"
-        android:background="@drawable/borders"
+        android:background="@drawable/white_borders"
         android:textAllCaps="false" />
 
     <View

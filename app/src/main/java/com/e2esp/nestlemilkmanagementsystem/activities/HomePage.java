@@ -15,7 +15,7 @@ import com.e2esp.nestlemilkmanagementsystem.R;
 public class HomePage extends AppCompatActivity {
 
     private AppCompatButton buttonManageMRNs;
-    Button buttonCreateMRN, buttonViewMRNs, buttonPurchaseSummary, buttonTransferMilkToMT;
+    Button buttonCreateMRN, buttonViewMRNs, buttonPurchaseSummary, buttonTransferMilkToMT, buttonEndOfDay;
     private LinearLayout innerLayout;
     boolean checked = true;
 
@@ -29,6 +29,7 @@ public class HomePage extends AppCompatActivity {
         onViewMRNsButtonClick();
         onDPSButtonClick();
         onTransferMilkToMTButtonClick();
+        onEndOfDayButtonClick();
     }
 
     private void getReferences(){
@@ -38,6 +39,7 @@ public class HomePage extends AppCompatActivity {
         buttonViewMRNs = (Button) findViewById(R.id.buttonViewMRNs);
         buttonPurchaseSummary = (Button) findViewById(R.id.buttonPurchaseSummary);
         buttonTransferMilkToMT = (Button) findViewById(R.id.buttonTransferMilkToMT);
+        buttonEndOfDay = (Button) findViewById(R.id.buttonEndOfDay);
     }
 
     private void onManageMRNsButtonClick(){
@@ -95,6 +97,17 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomePage.this, TransferMilkToMT.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+    }
+
+    private void onEndOfDayButtonClick(){
+        buttonEndOfDay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePage.this, EndOfDay.class);
                 startActivity(intent);
                 finish();
             }

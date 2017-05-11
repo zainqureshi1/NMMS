@@ -359,7 +359,7 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/editTextSelectedLR"
+            android:id="@+id/textViewSelectedLR"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".2"
@@ -378,7 +378,7 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/editTextSelectedSNF"
+            android:id="@+id/textViewSelectedSNF"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".2"
@@ -512,7 +512,7 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/editTextSelectedOrganol"
+            android:id="@+id/textViewSelectedOrganol"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".2"
@@ -531,7 +531,7 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/editTextSelectedAPT"
+            android:id="@+id/textViewSelectedAPT"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".2"
