@@ -17,11 +17,12 @@
         android:paddingLeft="@dimen/margin_medium"
         android:layout_centerInParent="true" >
 
-    <android.support.v7.widget.AppCompatEditText
+    <EditText
         android:id="@+id/editTextLogInUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/user_name"
+        android:inputType="text"
         android:textColorHint="@color/dark_silver"
         android:textColor="@color/black"
         android:padding="@dimen/padding_tiny_upper"
@@ -29,7 +30,7 @@
         android:background="@drawable/solid_borders"
         android:layout_marginTop="@dimen/margin_tiny" />
 
-    <android.support.v7.widget.AppCompatEditText
+    <EditText
         android:id="@+id/editTextLogInPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -60,12 +61,13 @@
 
     </LinearLayout>
 
-    <android.support.v7.widget.AppCompatTextView
+    <TextView
         android:id="@+id/textViewForgotPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/forgot_password"
         android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
         android:textSize="@dimen/text_size_medium_upper"
         android:textColor="@color/white_3"
         android:layout_below="@+id/linearLayoutSignIn" />
@@ -93,7 +95,9 @@
             android:src="@mipmap/url_icon"
             android:background="@color/transparent"
             android:paddingLeft="@dimen/padding_mega"
-            android:paddingRight="@dimen/padding_small" />
+            android:paddingStart="@dimen/padding_mega"
+            android:paddingRight="@dimen/padding_small"
+            android:paddingEnd="@dimen/padding_small"/>
 
         <ImageButton
             android:id="@+id/imageButtonSignUp"
@@ -102,7 +106,9 @@
             android:src="@mipmap/sign_up_icon"
             android:background="@color/transparent"
             android:paddingLeft="@dimen/padding_medium"
-            android:paddingRight="@dimen/padding_xxxhuge"/>
+            android:paddingStart="@dimen/padding_medium"
+            android:paddingRight="@dimen/padding_xxxhuge"
+            android:paddingEnd="@dimen/padding_xxxhuge"/>
 
     </LinearLayout>
 

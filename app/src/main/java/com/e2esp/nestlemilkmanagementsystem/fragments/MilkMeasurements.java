@@ -74,21 +74,18 @@ public class MilkMeasurements extends Fragment {
 
             try {
                 double dblValue = Double.parseDouble(s.toString());
-                if (dblValue < 0.5) {
+                if (dblValue < .5 || dblValue > 99999999.50) {
 
-                    dblValue = .5;
-                    String strValue = String.valueOf(dblValue);
-                    editTextVolume.setText(strValue);
-
-                } else if (dblValue > 99999999.50) {
-
-                    dblValue = 99999999.50;
-                    String strValue = String.valueOf(dblValue);
-                    editTextVolume.setText(strValue);
+                    textViewVolume.setText(getResources().getString(R.string.vol_alert_text));
+                    textViewVolume.setTextColor(getResources().getColor(R.color.red));
+                } else {
+                    textViewVolume.setText(getResources().getString(R.string.volume));
+                    textViewVolume.setTextColor(getResources().getColor(R.color.black));
                 }
             } catch (Exception e) {}
         }
     };
+
     private final TextWatcher fatWatcher = new TextWatcher() {
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -106,21 +103,18 @@ public class MilkMeasurements extends Fragment {
 
             try {
                 double dblValue = Double.parseDouble(s.toString());
-                if (dblValue < 2.00) {
+                if (dblValue < 2 || dblValue > 9.99) {
 
-                    dblValue = 2.00;
-                    String strValue = String.valueOf(dblValue);
-                    editTextFat.setText(strValue);
-
-                } else if (dblValue > 9.99) {
-
-                    dblValue = 9.99;
-                    String strValue = String.valueOf(dblValue);
-                    editTextFat.setText(strValue);
+                    textViewFat.setText(getResources().getString(R.string.fat_alert_text));
+                    textViewFat.setTextColor(getResources().getColor(R.color.red));
+                } else {
+                    textViewFat.setText(getResources().getString(R.string.fat));
+                    textViewFat.setTextColor(getResources().getColor(R.color.black));
                 }
             } catch (Exception e) {}
         }
     };
+
     private final TextWatcher lrReadingWatcher = new TextWatcher() {
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -147,6 +141,7 @@ public class MilkMeasurements extends Fragment {
             } catch (Exception e) {}
         }
     };
+
     private final TextWatcher temperatureWatcher = new TextWatcher() {
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -164,17 +159,12 @@ public class MilkMeasurements extends Fragment {
 
             try {
                 int intValue = Integer.parseInt(s.toString());
-                if (intValue < 4) {
-
-                    intValue = 4;
-                    String strValue = String.valueOf(intValue);
-                    editTextTemperature.setText(strValue);
-
-                } else if (intValue > 40) {
-
-                    intValue = 40;
-                    String strValue = String.valueOf(intValue);
-                    editTextTemperature.setText(strValue);
+                if (intValue < 4 || intValue > 40) {
+                    textViewTemperature.setText(getResources().getString(R.string.temp_alert_text));
+                    textViewTemperature.setTextColor(getResources().getColor(R.color.red));
+                } else {
+                    textViewTemperature.setText(getResources().getString(R.string.temperature));
+                    textViewTemperature.setTextColor(getResources().getColor(R.color.black));
                 }
             } catch (Exception e) {}
         }

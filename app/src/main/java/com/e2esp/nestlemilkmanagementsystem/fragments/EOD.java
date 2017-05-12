@@ -125,6 +125,7 @@ public class EOD extends Fragment {
             } catch (Exception e) {}
         }
     };
+
     private final TextWatcher fatEODWatcher = new TextWatcher() {
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -153,6 +154,7 @@ public class EOD extends Fragment {
             } catch (Exception e) {}
         }
     };
+
     private final TextWatcher lrReadingEODWatcher = new TextWatcher() {
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -179,6 +181,7 @@ public class EOD extends Fragment {
             } catch (Exception e) {}
         }
     };
+
     private final TextWatcher temperatureEODWatcher = new TextWatcher() {
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 

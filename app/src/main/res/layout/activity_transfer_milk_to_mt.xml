@@ -107,7 +107,9 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="@color/silver_blue"
-                    android:padding="@dimen/padding_tiny_upper">
+                    android:paddingLeft="@dimen/padding_tiny_upper"
+                    android:paddingRight="@dimen/padding_tiny_upper"
+                    android:paddingTop="@dimen/padding_minute">
 
                     <TextView
                         android:id="@+id/textViewTMVolume"
@@ -156,7 +158,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="@color/silver_blue"
-                    android:padding="@dimen/padding_tiny_upper">
+                    android:paddingLeft="@dimen/padding_tiny_upper"
+                    android:paddingRight="@dimen/padding_tiny_upper">
 
 
                     <TextView
@@ -205,7 +208,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="@color/silver_blue"
-                    android:padding="@dimen/padding_tiny_upper">
+                    android:paddingLeft="@dimen/padding_tiny_upper"
+                    android:paddingRight="@dimen/padding_tiny_upper">
 
 
                     <TextView
@@ -254,7 +258,9 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="@color/silver_blue"
-                    android:padding="@dimen/padding_tiny_upper">
+                    android:paddingLeft="@dimen/padding_tiny_upper"
+                    android:paddingRight="@dimen/padding_tiny_upper"
+                    android:paddingBottom="@dimen/padding_minute">
 
 
                     <TextView
@@ -295,7 +301,9 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="@color/silver_blue"
-                    android:padding="@dimen/padding_tiny_upper">
+                    android:paddingLeft="@dimen/padding_tiny_upper"
+                    android:paddingRight="@dimen/padding_tiny_upper"
+                    android:paddingTop="@dimen/padding_minute">
 
                     <TextView
                         android:id="@+id/textViewMSVolume"
@@ -344,7 +352,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="@color/silver_blue"
-                    android:padding="@dimen/padding_tiny_upper">
+                    android:paddingLeft="@dimen/padding_tiny_upper"
+                    android:paddingRight="@dimen/padding_tiny_upper">
 
 
                     <TextView
@@ -393,7 +402,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="@color/silver_blue"
-                    android:padding="@dimen/padding_tiny_upper">
+                    android:paddingLeft="@dimen/padding_tiny_upper"
+                    android:paddingRight="@dimen/padding_tiny_upper">
 
 
                     <TextView
@@ -442,7 +452,9 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="@color/silver_blue"
-                    android:padding="@dimen/padding_tiny_upper">
+                    android:paddingLeft="@dimen/padding_tiny_upper"
+                    android:paddingRight="@dimen/padding_tiny_upper"
+                    android:paddingBottom="@dimen/padding_minute">
 
 
                     <TextView
@@ -483,7 +495,9 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="@color/silver_blue"
-                    android:padding="@dimen/padding_tiny_upper">
+                    android:paddingLeft="@dimen/padding_tiny_upper"
+                    android:paddingRight="@dimen/padding_tiny_upper"
+                    android:paddingTop="@dimen/padding_minute">
 
                     <TextView
                         android:id="@+id/textViewESVolume"
@@ -532,7 +546,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="@color/silver_blue"
-                    android:padding="@dimen/padding_tiny_upper">
+                    android:paddingLeft="@dimen/padding_tiny_upper"
+                    android:paddingRight="@dimen/padding_tiny_upper">
 
 
                     <TextView
@@ -581,7 +596,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="@color/silver_blue"
-                    android:padding="@dimen/padding_tiny_upper">
+                    android:paddingLeft="@dimen/padding_tiny_upper"
+                    android:paddingRight="@dimen/padding_tiny_upper">
 
 
                     <TextView
@@ -630,7 +646,9 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="@color/silver_blue"
-                    android:padding="@dimen/padding_tiny_upper">
+                    android:paddingLeft="@dimen/padding_tiny_upper"
+                    android:paddingRight="@dimen/padding_tiny_upper"
+                    android:paddingBottom="@dimen/padding_minute">
 
 
                     <TextView
@@ -672,7 +690,9 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="@color/silver_blue"
-                    android:padding="@dimen/padding_tiny_upper">
+                    android:paddingLeft="@dimen/padding_tiny_upper"
+                    android:paddingRight="@dimen/padding_tiny_upper"
+                    android:paddingTop="@dimen/padding_minute">
 
                     <TextView
                         android:id="@+id/textViewLOMVolume"
@@ -721,7 +741,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="@color/silver_blue"
-                    android:padding="@dimen/padding_tiny_upper">
+                    android:paddingLeft="@dimen/padding_tiny_upper"
+                    android:paddingRight="@dimen/padding_tiny_upper">
 
 
                     <TextView
@@ -770,7 +791,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="@color/silver_blue"
-                    android:padding="@dimen/padding_tiny_upper">
+                    android:paddingLeft="@dimen/padding_tiny_upper"
+                    android:paddingRight="@dimen/padding_tiny_upper">
 
 
                     <TextView
@@ -819,7 +841,9 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="@color/silver_blue"
-                    android:padding="@dimen/padding_tiny_upper">
+                    android:paddingLeft="@dimen/padding_tiny_upper"
+                    android:paddingRight="@dimen/padding_tiny_upper"
+                    android:paddingBottom="@dimen/padding_minute">
 
 
                     <TextView
@@ -860,7 +884,9 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="@color/silver_blue"
-                    android:padding="@dimen/padding_tiny_upper">
+                    android:paddingLeft="@dimen/padding_tiny_upper"
+                    android:paddingRight="@dimen/padding_tiny_upper"
+                    android:paddingTop="@dimen/padding_minute">
 
                     <TextView
                         android:id="@+id/textViewRMVolume"
@@ -909,7 +935,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="@color/silver_blue"
-                    android:padding="@dimen/padding_tiny_upper">
+                    android:paddingLeft="@dimen/padding_tiny_upper"
+                    android:paddingRight="@dimen/padding_tiny_upper">
 
 
                     <TextView
@@ -958,7 +985,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="@color/silver_blue"
-                    android:padding="@dimen/padding_tiny_upper">
+                    android:paddingLeft="@dimen/padding_tiny_upper"
+                    android:paddingRight="@dimen/padding_tiny_upper">
 
 
                     <TextView
@@ -1007,7 +1035,9 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="@color/silver_blue"
-                    android:padding="@dimen/padding_tiny_upper">
+                    android:paddingLeft="@dimen/padding_tiny_upper"
+                    android:paddingRight="@dimen/padding_tiny_upper"
+                    android:paddingBottom="@dimen/padding_minute">
 
 
                     <TextView
