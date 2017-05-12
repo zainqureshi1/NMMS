@@ -166,6 +166,7 @@
     <string name="adjusted_lr">Adjusted LR:</string>
     <string name="today_milk_purchased">Today Milk Purchased</string>
     <string name="current_day_lom">Current Day Left Over Milk</string>
+    <string name="selected_item_status">A</string>
 
 
 </resources>

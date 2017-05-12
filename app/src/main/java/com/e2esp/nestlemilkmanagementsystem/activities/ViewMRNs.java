@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.view.View;
 import android.widget.TextView;
@@ -17,7 +18,6 @@ import com.e2esp.nestlemilkmanagementsystem.fragments.UpdateMRNInformation;
 import com.e2esp.nestlemilkmanagementsystem.fragments.ViewMRNDetails;
 
 public class ViewMRNs extends FragmentActivity {
-
     AppCompatButton viewMRNDetailsCancelButton, viewMRNDetailsBackButton, viewMRNDetailsUpdateButton;
     TextView pageTitleViewMRNDetails;
     int counter = 1;
@@ -25,7 +25,6 @@ public class ViewMRNs extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_mrns);
-
         getReferences();
         addListenerOnButtonCancel();
         addListenerOnButtonUpdate();
@@ -66,8 +65,6 @@ public class ViewMRNs extends FragmentActivity {
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
-                        Intent intent = new Intent(ViewMRNs.this, HomePage.class);
-                        startActivity(intent);
                         finish();
                     }
                 });
@@ -217,6 +214,10 @@ public class ViewMRNs extends FragmentActivity {
             counter--;
             viewMRNDetailsBackButton.setVisibility(View.GONE);
              pageTitleViewMRNDetails.setText(R.string.update_mrn);
+        }
+
+        else if(counter == 1){
+            finish();
         }
 
     }

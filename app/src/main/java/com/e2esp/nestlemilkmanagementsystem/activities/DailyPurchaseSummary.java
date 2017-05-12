@@ -16,7 +16,6 @@ public class DailyPurchaseSummary extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_daily_purchase_summary);
-
         getReferences();
         addListenerOnButtonBack();
     }
@@ -35,8 +34,6 @@ public class DailyPurchaseSummary extends AppCompatActivity {
     }
 
     private void onBackButtonClick(){
-        Intent intent = new Intent(DailyPurchaseSummary.this, HomePage.class);
-        startActivity(intent);
         finish();
     }
 }

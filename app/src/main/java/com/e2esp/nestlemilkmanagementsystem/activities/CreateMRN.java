@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.view.View;
 import android.support.v4.app.FragmentManager;
@@ -18,14 +19,12 @@ import com.e2esp.nestlemilkmanagementsystem.fragments.ViewMRNDetails;
 
 
 public class CreateMRN extends FragmentActivity {
-
     AppCompatButton createMRNCancelButton, createMRNNextButton, createMRNBackButton;
     int counter = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_mrn);
-
         getReferences();
         addListenerOnButtonCancel();
         addListenerOnButtonNext();
@@ -84,8 +83,6 @@ public class CreateMRN extends FragmentActivity {
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
-                        Intent intent = new Intent(CreateMRN.this, HomePage.class);
-                        startActivity(intent);
                         finish();
                     }
                 });

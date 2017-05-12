@@ -56,8 +56,6 @@ public class TransferMilkToMT extends AppCompatActivity {
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
-                        Intent intent = new Intent(TransferMilkToMT.this, HomePage.class);
-                        startActivity(intent);
                         finish();
                     }
                 });

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_1"
+    android:paddingTop="@dimen/padding_tiny"
+    android:paddingLeft="@dimen/padding_tiny_upper"
+    android:paddingRight="@dimen/padding_tiny_upper">
+
+    <TextView
+        android:id="@+id/textViewItemMRNNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".15"
+        android:textColor="@color/black"
+        android:hint="@string/selected_mrn"
+        android:textColorHint="@color/black" />
+
+    <TextView
+        android:id="@+id/textViewItemSupplier"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".15"
+        android:textColor="@color/black"
+        android:hint="@string/supplier_code"
+        android:textColorHint="@color/black"/>
+
+    <TextView
+        android:id="@+id/textViewItemVol"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".15"
+        android:textColor="@color/black"
+        android:hint="@string/selected_volume"
+        android:textColorHint="@color/black"/>
+
+    <TextView
+        android:id="@+id/textViewItemFat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".15"
+        android:textColor="@color/black"
+        android:hint="@string/selected_fat"
+        android:textColorHint="@color/black"/>
+
+    <TextView
+        android:id="@+id/textViewItemLR"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".15"
+        android:textColor="@color/black"
+        android:hint="@string/selected_lr"
+        android:textColorHint="@color/black"/>
+
+    <TextView
+        android:id="@+id/textViewItemStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".15"
+        android:textColor="@color/black"
+        android:hint="@string/selected_item_status"
+        android:textColorHint="@color/black"/>
+</LinearLayout>

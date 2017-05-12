@@ -24,6 +24,7 @@ public class UpdateMasterData extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.update_master_data);
+
         getReferences();
         displayDate();
         displayTime();
@@ -53,9 +54,9 @@ public class UpdateMasterData extends AppCompatActivity {
         masterDataCancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(UpdateMasterData.this, HomePage.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

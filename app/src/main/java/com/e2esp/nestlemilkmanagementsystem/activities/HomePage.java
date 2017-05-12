@@ -65,7 +65,6 @@ public class HomePage extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(HomePage.this, CreateMRN.class);
                 startActivity(intent);
-                finish();
             }
         });
     }
@@ -74,9 +73,8 @@ public class HomePage extends AppCompatActivity {
         buttonViewMRNs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomePage.this, ViewMRNs.class);
+                Intent intent = new Intent(HomePage.this, SubmittedMRNs.class);
                 startActivity(intent);
-                finish();
             }
         });
     }
@@ -87,7 +85,6 @@ public class HomePage extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(HomePage.this, DailyPurchaseSummary.class);
                 startActivity(intent);
-                finish();
             }
         });
     }
@@ -98,7 +95,6 @@ public class HomePage extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(HomePage.this, TransferMilkToMT.class);
                 startActivity(intent);
-                finish();
             }
         });
     }
@@ -109,7 +105,6 @@ public class HomePage extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(HomePage.this, EndOfDay.class);
                 startActivity(intent);
-                finish();
             }
         });
     }

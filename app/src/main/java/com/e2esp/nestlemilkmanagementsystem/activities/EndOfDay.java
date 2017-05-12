@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.view.View;
 import android.widget.RadioButton;
@@ -16,7 +17,6 @@ import com.e2esp.nestlemilkmanagementsystem.fragments.EODSummary;
 
 
 public class EndOfDay extends FragmentActivity {
-
     AppCompatButton eodCancelButton, eodBackButton, endOfDayButton;
     int counter = 1;
 
@@ -26,7 +26,6 @@ public class EndOfDay extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end_of_day);
-
         getReferences();
         addListenerOnButtonCancel();
         addListenerOnButtonBack();
@@ -82,8 +81,6 @@ public class EndOfDay extends FragmentActivity {
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
-                        Intent intent = new Intent(EndOfDay.this, HomePage.class);
-                        startActivity(intent);
                         finish();
                     }
                 });
