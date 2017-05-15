@@ -14,7 +14,7 @@ import com.e2esp.nestlemilkmanagementsystem.R;
 
 public class UpdateMasterData extends AppCompatActivity {
 
-    private TextView textViewDisplayDate, textViewDisplayTime;
+    private TextView textViewDisplayDate, textViewDisplayTime, textViewUserType;
     private Calendar calendar;
 
     private AppCompatButton masterDataCancelButton, masterDataUpdateButton;
@@ -26,6 +26,7 @@ public class UpdateMasterData extends AppCompatActivity {
         setContentView(R.layout.update_master_data);
 
         getReferences();
+        textViewUserType.setText(getResources().getString(R.string.user_msa));
         displayDate();
         displayTime();
         onUpdateButtonClicked();
@@ -38,6 +39,7 @@ public class UpdateMasterData extends AppCompatActivity {
         updatingInformation = (LinearLayout) findViewById(R.id.updatingInformation);
         textViewDisplayDate = (TextView) findViewById(R.id.textViewDisplayDate);
         textViewDisplayTime = (TextView) findViewById(R.id.textViewDisplayTime);
+        textViewUserType = (TextView) findViewById(R.id.textViewUserType);
     }
 
 

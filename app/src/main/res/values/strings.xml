@@ -14,6 +14,7 @@
     <string name="user_type">User</string>
     <string name="status">Status</string>
 
+    <string name="user_msa">MSA</string>
     <string name="manage_mrns">Manage MRNs</string>
     <string name="receive_milk">Receive Milk</string>
     <string name="create_mrn">Create MRN</string>
@@ -167,6 +168,16 @@
     <string name="today_milk_purchased">Today Milk Purchased</string>
     <string name="current_day_lom">Current Day Left Over Milk</string>
     <string name="selected_item_status">A</string>
+
+    <string name="user_mt">MT</string>
+    <string name="manage_collections">Manage Collections</string>
+    <string name="start_journey">Start Journey</string>
+    <string name="collect_milk">Collect Milk</string>
+    <string name="collections_list">View List of Collections</string>
+    <string name="pickup_rejected_milk">Pickup Rejected Milk</string>
+    <string name="end_journey">End Journey</string>
+    <string name="view_list_of_journeys">View List of Journeys</string>
+
 
 
 </resources>

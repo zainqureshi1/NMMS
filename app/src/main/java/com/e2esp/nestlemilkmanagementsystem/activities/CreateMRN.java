@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.view.View;
 import android.support.v4.app.FragmentManager;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.e2esp.nestlemilkmanagementsystem.R;
@@ -20,12 +21,17 @@ import com.e2esp.nestlemilkmanagementsystem.fragments.ViewMRNDetails;
 
 public class CreateMRN extends FragmentActivity {
     AppCompatButton createMRNCancelButton, createMRNNextButton, createMRNBackButton;
+    private TextView textViewUserType;
     int counter = 1;
+    final static String userType = "USER_TYPE";
+    private String value;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_mrn);
         getReferences();
+        setUserType();
         addListenerOnButtonCancel();
         addListenerOnButtonNext();
         addListenerOnButtonBack();
@@ -42,9 +48,20 @@ public class CreateMRN extends FragmentActivity {
     }
 
     private void getReferences(){
+        textViewUserType = (TextView) findViewById(R.id.textViewUserType);
         createMRNCancelButton = (AppCompatButton) findViewById(R.id.createMRNCancelButton);
         createMRNNextButton = (AppCompatButton) findViewById(R.id.createMRNNextButton);
         createMRNBackButton = (AppCompatButton) findViewById(R.id.createMRNBackButton);
+    }
+
+    private void setUserType() {
+        value =  getIntent().getStringExtra(userType);
+        if(value.equals("MSA")){
+            textViewUserType.setText(getResources().getString(R.string.user_msa));
+        }
+        else if(value.equals("MT")){
+            textViewUserType.setText(getResources().getString(R.string.user_mt));
+        }
     }
 
     private void addListenerOnButtonCancel(){
@@ -194,8 +211,8 @@ public class CreateMRN extends FragmentActivity {
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
-                        Intent intent = new Intent(CreateMRN.this, HomePage.class);
-                        startActivity(intent);
+                        dialog.dismiss();
+                       finish();
                     }
                 });
 

@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.view.View;
 import android.widget.RadioButton;
+import android.widget.TextView;
 
 import com.e2esp.nestlemilkmanagementsystem.R;
 import com.e2esp.nestlemilkmanagementsystem.fragments.EOD;
@@ -19,7 +20,7 @@ import com.e2esp.nestlemilkmanagementsystem.fragments.EODSummary;
 public class EndOfDay extends FragmentActivity {
     AppCompatButton eodCancelButton, eodBackButton, endOfDayButton;
     int counter = 1;
-
+    private TextView textViewUserType;
     EOD endOfDayFragment = new EOD();
 
     @Override
@@ -27,6 +28,7 @@ public class EndOfDay extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end_of_day);
         getReferences();
+        textViewUserType.setText(getResources().getString(R.string.user_msa));
         addListenerOnButtonCancel();
         addListenerOnButtonBack();
         addListenerOnButtonEndOfDay();
@@ -41,6 +43,7 @@ public class EndOfDay extends FragmentActivity {
     }
 
     private void getReferences(){
+        textViewUserType = (TextView) findViewById(R.id.textViewUserType);
         eodCancelButton = (AppCompatButton) findViewById(R.id.eodCancelButton);
         eodBackButton = (AppCompatButton) findViewById(R.id.eodBackButton);
         endOfDayButton = (AppCompatButton) findViewById(R.id.endOfDayButton);

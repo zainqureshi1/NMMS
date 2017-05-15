@@ -35,16 +35,17 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".activities.DailyPurchaseSummary"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.TransferMilkToMT"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.SubmittedMRNs"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.EndOfDay"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.MTDashBoard"></activity>
     </application>
 
 </manifest>

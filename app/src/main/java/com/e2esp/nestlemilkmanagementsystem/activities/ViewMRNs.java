@@ -19,13 +19,17 @@ import com.e2esp.nestlemilkmanagementsystem.fragments.ViewMRNDetails;
 
 public class ViewMRNs extends FragmentActivity {
     AppCompatButton viewMRNDetailsCancelButton, viewMRNDetailsBackButton, viewMRNDetailsUpdateButton;
-    TextView pageTitleViewMRNDetails;
+    TextView pageTitleViewMRNDetails, textViewUserType;
     int counter = 1;
+    final static String userType = "USER_TYPE";
+    private String value;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_mrns);
         getReferences();
+        setUserType();
         addListenerOnButtonCancel();
         addListenerOnButtonUpdate();
         addListenerOnButtonBack();
@@ -45,6 +49,17 @@ public class ViewMRNs extends FragmentActivity {
         viewMRNDetailsBackButton = (AppCompatButton) findViewById(R.id.viewMRNDetailsBackButton);
         viewMRNDetailsUpdateButton = (AppCompatButton) findViewById(R.id.viewMRNDetailsUpdateButton);
         pageTitleViewMRNDetails = (TextView) findViewById(R.id.pageTitleViewMRNDetails);
+        textViewUserType = (TextView) findViewById(R.id.textViewUserType);
+    }
+
+    private void setUserType() {
+        value =  getIntent().getStringExtra(userType);
+        if(value.equals("MSA")){
+            textViewUserType.setText(getResources().getString(R.string.user_msa));
+        }
+        else if(value.equals("MT")){
+            textViewUserType.setText(getResources().getString(R.string.user_mt));
+        }
     }
 
      private void addListenerOnButtonCancel(){
@@ -230,8 +245,8 @@ public class ViewMRNs extends FragmentActivity {
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
-                        Intent intent = new Intent(ViewMRNs.this, HomePage.class);
-                        startActivity(intent);
+                        dialog.dismiss();
+                        finish();
                     }
                 });
 

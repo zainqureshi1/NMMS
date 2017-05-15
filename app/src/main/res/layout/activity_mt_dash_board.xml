@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_plain"
+    tools:context=".activities.MTDashBoard" >
+
+    <include layout="@layout/title_layout"
+        android:id="@+id/pageHeader"/>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+       <android.support.v7.widget.AppCompatButton
+        android:id="@+id/buttonMTManageCollections"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/manage_collections"
+        android:background="@drawable/rounded_borders"
+        android:textColor="@color/ligh_black"
+        android:textAlignment="textStart"
+        android:layout_gravity="start"
+        android:padding="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_huge"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_large"
+        android:textSize="@dimen/text_size_medium"
+        android:textAllCaps="false"/>
+
+    <LinearLayout
+        android:id="@+id/manageCollectionsMTInnerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_huge"
+        android:layout_marginRight="@dimen/margin_huge"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/buttonMTStartJourney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/start_journey"
+            android:background="@color/light_cgreen"
+            android:textColor="@color/ligh_black"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small"
+            android:textSize="@dimen/text_size_medium"
+            android:drawableRight="@drawable/start_journey"
+            android:drawableEnd="@drawable/start_journey"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/buttonMTCollectMilk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/collect_milk"
+            android:background="@color/light_cgreen"
+            android:textColor="@color/ligh_black"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small"
+            android:layout_marginTop="@dimen/margin_two_minute"
+            android:textSize="@dimen/text_size_medium"
+            android:drawableRight="@drawable/collected_rejected_milk"
+            android:drawableEnd="@drawable/collected_rejected_milk"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/buttonMTViewListOfCollections"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/collections_list"
+            android:background="@color/light_cgreen"
+            android:textColor="@color/ligh_black"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small"
+            android:layout_marginTop="@dimen/margin_two_minute"
+            android:textSize="@dimen/text_size_medium"
+            android:drawableRight="@mipmap/view_mrn_icon"
+            android:drawableEnd="@mipmap/view_mrn_icon"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/buttonMTPickupRejectedMilk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pickup_rejected_milk"
+            android:background="@color/light_cgreen"
+            android:textColor="@color/ligh_black"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small"
+            android:layout_marginTop="@dimen/margin_two_minute"
+            android:textSize="@dimen/text_size_medium"
+            android:drawableRight="@drawable/collected_rejected_milk"
+            android:drawableEnd="@drawable/collected_rejected_milk"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/buttonMTEndJourney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/end_journey"
+            android:background="@color/light_cgreen"
+            android:textColor="@color/ligh_black"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small"
+            android:layout_marginTop="@dimen/margin_two_minute"
+            android:textSize="@dimen/text_size_medium"
+            android:drawableRight="@drawable/end_journey"
+            android:drawableEnd="@drawable/end_journey"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/buttonMTViewListOfJourneys"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/view_list_of_journeys"
+            android:background="@color/light_cgreen"
+            android:textColor="@color/ligh_black"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small"
+            android:layout_marginTop="@dimen/margin_two_minute"
+            android:textSize="@dimen/text_size_medium"
+            android:drawableRight="@mipmap/view_mrn_icon"
+            android:drawableEnd="@mipmap/view_mrn_icon"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/buttonMTManageMRNs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/manage_mrns"
+        android:background="@drawable/rounded_borders"
+        android:textColor="@color/ligh_black"
+        android:textAlignment="textStart"
+        android:layout_gravity="start"
+        android:padding="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_large"
+        android:onClick="onManageMRNsButtonClick"
+        android:textSize="@dimen/text_size_medium"
+        android:textAllCaps="false"/>
+
+
+    <LinearLayout
+        android:id="@+id/manageMRNsMTInnerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_huge"
+        android:layout_marginRight="@dimen/margin_huge"
+        android:layout_marginBottom="@dimen/margin_huge"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/buttonMTCreateMRN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/create_mrn"
+            android:background="@color/light_cgreen"
+            android:textColor="@color/ligh_black"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small"
+            android:textSize="@dimen/text_size_medium"
+            android:drawableRight="@mipmap/create_mrn_icon"
+            android:drawableEnd="@mipmap/create_mrn_icon"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/buttonMTViewMRNs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/view_mrn"
+            android:background="@color/light_cgreen"
+            android:textColor="@color/ligh_black"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small"
+            android:layout_marginTop="@dimen/margin_two_minute"
+            android:textSize="@dimen/text_size_medium"
+            android:drawableRight="@mipmap/view_mrn_icon"
+            android:drawableEnd="@mipmap/view_mrn_icon"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/buttonMTPurchaseSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/purchase_summary"
+            android:background="@color/light_cgreen"
+            android:textColor="@color/ligh_black"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small"
+            android:layout_marginTop="@dimen/margin_two_minute"
+            android:textSize="@dimen/text_size_medium"
+            android:drawableRight="@mipmap/purchase_summary_icon"
+            android:drawableEnd="@mipmap/purchase_summary_icon"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>
+
+</LinearLayout>

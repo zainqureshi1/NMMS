@@ -51,6 +51,7 @@
             android:textSize="@dimen/text_size_medium"
             android:onClick="onCreateMRNButtonClick"
             android:drawableRight="@mipmap/create_mrn_icon"
+            android:drawableEnd="@mipmap/create_mrn_icon"
             android:textAllCaps="false" />
 
         <Button
@@ -68,6 +69,7 @@
             android:textSize="@dimen/text_size_medium"
             android:onClick="onViewMRNsButtonClick"
             android:drawableRight="@mipmap/view_mrn_icon"
+            android:drawableEnd="@mipmap/view_mrn_icon"
             android:textAllCaps="false" />
 
         <Button
@@ -85,6 +87,7 @@
             android:textSize="@dimen/text_size_medium"
             android:onClick="onDPSButtonClick"
             android:drawableRight="@mipmap/purchase_summary_icon"
+            android:drawableEnd="@mipmap/purchase_summary_icon"
             android:textAllCaps="false" />
 
         <Button
@@ -102,6 +105,7 @@
             android:textSize="@dimen/text_size_medium"
             android:onClick="onTransferMilkButtonClick"
             android:drawableRight="@mipmap/transfer_milk_icon"
+            android:drawableEnd="@mipmap/transfer_milk_icon"
             android:textAllCaps="false" />
 
         <Button
@@ -119,6 +123,7 @@
             android:textSize="@dimen/text_size_medium"
             android:onClick="onEndOfDayButtonClick"
             android:drawableRight="@mipmap/end_day_icon"
+            android:drawableEnd="@mipmap/end_day_icon"
             android:textAllCaps="false" />
 
 

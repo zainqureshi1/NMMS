@@ -7,12 +7,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatButton;
 import android.view.View;
+import android.widget.TextView;
 
 import com.e2esp.nestlemilkmanagementsystem.R;
 
 public class TransferMilkToMT extends AppCompatActivity {
 
     AppCompatButton transferMilkCancelButton, transferMilkBackButton;
+    private TextView textViewUserType;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,7 @@ public class TransferMilkToMT extends AppCompatActivity {
         setContentView(R.layout.activity_transfer_milk_to_mt);
 
         getReferences();
+        textViewUserType.setText(getResources().getString(R.string.user_msa));
         addListenerOnButtonCancel();
         addListenerOnButtonTransfer();
     }
@@ -27,6 +30,7 @@ public class TransferMilkToMT extends AppCompatActivity {
     private void getReferences(){
         transferMilkCancelButton = (AppCompatButton) findViewById(R.id.transferMilkCancelButton);
         transferMilkBackButton = (AppCompatButton) findViewById(R.id.transferMilkBackButton);
+        textViewUserType = (TextView) findViewById(R.id.textViewUserType);
     }
 
     private void addListenerOnButtonCancel(){

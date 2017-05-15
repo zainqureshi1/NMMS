@@ -9,18 +9,23 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.e2esp.nestlemilkmanagementsystem.R;
 import com.e2esp.nestlemilkmanagementsystem.adapters.SubmittedMRNsAdapter;
 import com.e2esp.nestlemilkmanagementsystem.models.MRNsList;
 
 import java.util.ArrayList;
+import java.util.PriorityQueue;
 
 
 public class SubmittedMRNs extends AppCompatActivity {
 
     private ListView submittedMRNsListView;
     private AppCompatButton submittedMRNsBackButton;
+    private TextView textViewUserType;
+    final static String userType = "USER_TYPE";
+    private String value, myKey;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +33,7 @@ public class SubmittedMRNs extends AppCompatActivity {
         setContentView(R.layout.activity_submitted_mrns);
 
         getReferences();
+        setUserType();
         onButtonSubmittedMRNsBackClick();
 
         // Construct the data source
@@ -50,6 +56,12 @@ public class SubmittedMRNs extends AppCompatActivity {
 
                 Intent intent = new Intent(SubmittedMRNs.this,ViewMRNs.class);
                 //based on item add info to intent
+                if (myKey.equals("MSA")){
+                    intent.putExtra(ViewMRNs.userType, "MSA");
+                }
+                else if(myKey.equals("MT")){
+                    intent.putExtra(ViewMRNs.userType, "MT");
+                }
                 startActivity(intent);
             }
         });
@@ -59,6 +71,19 @@ public class SubmittedMRNs extends AppCompatActivity {
     private void getReferences(){
         submittedMRNsListView = (ListView) findViewById(R.id.submittedMRNsListView);
         submittedMRNsBackButton = (AppCompatButton) findViewById(R.id.submittedMRNsBackButton);
+        textViewUserType = (TextView) findViewById(R.id.textViewUserType);
+    }
+
+    private void setUserType() {
+        value =  getIntent().getStringExtra(userType);
+        if(value.equals("MSA")){
+            textViewUserType.setText(getResources().getString(R.string.user_msa));
+            myKey = "MSA";
+        }
+        else if(value.equals("MT")){
+            textViewUserType.setText(getResources().getString(R.string.user_mt));
+            myKey = "MT";
+        }
     }
 
     private void onButtonSubmittedMRNsBackClick(){
