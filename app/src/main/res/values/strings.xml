@@ -178,6 +178,17 @@
     <string name="end_journey">End Journey</string>
     <string name="view_list_of_journeys">View List of Journeys</string>
 
-
+    <string name="route_info">Route Information</string>
+    <string name="route_code">Route Code:</string>
+    <string name="selected_route_code">Route Code</string>
+    <string name="route_name">Rooute Name:</string>
+    <string name="selected_route_name">Route Name</string>
+    <string name="vehicle_info">Vehicle Information</string>
+    <string name="vehicle_code">Vehicle Code:</string>
+    <string name="selected_vehicle_code">Vehicle Code</string>
+    <string name="vehicle_number">Vehicle Number</string>
+    <string name="selected_vehicle_num">Vehicle Number</string>
+    <string name="tanker_capacity">Tanker Capacity (ton):</string>
+    <string name="selected_tanker_capacity">Tanker Capacity</string>
 
 </resources>

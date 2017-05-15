@@ -11,47 +11,47 @@ import android.widget.TextView;
 
 import com.e2esp.nestlemilkmanagementsystem.R;
 
-public class TransferMilkToMT extends AppCompatActivity {
+public class StartJourney extends AppCompatActivity {
 
-    AppCompatButton transferMilkCancelButton, transferMilkBackButton;
     private TextView textViewUserType;
-
+    private AppCompatButton startJournyCancelButton;
+    private AppCompatButton startJournySaveButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_transfer_milk_to_mt);
-
+        setContentView(R.layout.activity_start_journey);
         getReferences();
-        textViewUserType.setText(getResources().getString(R.string.user_msa));
+        textViewUserType.setText(getResources().getString(R.string.user_mt));
         addListenerOnButtonCancel();
-        addListenerOnButtonTransfer();
+        addListenerOnButtonSave();
     }
 
     private void getReferences(){
-        transferMilkCancelButton = (AppCompatButton) findViewById(R.id.transferMilkCancelButton);
-        transferMilkBackButton = (AppCompatButton) findViewById(R.id.transferMilkBackButton);
+        startJournyCancelButton = (AppCompatButton) findViewById(R.id.startJournyCancelButton);
+        startJournySaveButton = (AppCompatButton) findViewById(R.id.startJournySaveButton);
+
         textViewUserType = (TextView) findViewById(R.id.textViewUserType);
     }
 
     private void addListenerOnButtonCancel(){
-        transferMilkCancelButton.setOnClickListener(new View.OnClickListener() {
+        startJournyCancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onTransferMilkCancelButtonClick();
+                onStartJourneyCancelButtonClick();
             }
         });
     }
 
-    private void addListenerOnButtonTransfer(){
-        transferMilkBackButton.setOnClickListener(new View.OnClickListener() {
+    private void addListenerOnButtonSave(){
+        startJournySaveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onTransferMilkTransferButtonClick();
+                onStartJourneySaveButtonClick();
             }
         });
     }
 
-    private void onTransferMilkCancelButtonClick(){
+    private void onStartJourneyCancelButtonClick(){
 
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         alertDialogBuilder.setTitle("Alert");
@@ -60,6 +60,7 @@ public class TransferMilkToMT extends AppCompatActivity {
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
+                        dialog.dismiss();
                         finish();
                     }
                 });
@@ -77,10 +78,10 @@ public class TransferMilkToMT extends AppCompatActivity {
     }
 
 
-    private void onTransferMilkTransferButtonClick(){
+    private void onStartJourneySaveButtonClick(){
         final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setTitle("Confirmation Transfer Milk");
-        alertDialogBuilder.setMessage("Do you want to transfer milk to MT?");
+        alertDialogBuilder.setTitle("Save Journey");
+        alertDialogBuilder.setMessage("Are you sure you want to save journey?");
         alertDialogBuilder.setPositiveButton("Yes",
                 new DialogInterface.OnClickListener() {
                     @Override
@@ -105,14 +106,12 @@ public class TransferMilkToMT extends AppCompatActivity {
 
     public void showAcknowledgement(){
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setTitle("Transfer Milk");
-        alertDialogBuilder.setMessage("Your passcode is 8492. Please provide this passcode to MT.");
+        alertDialogBuilder.setTitle("Acknowledgement");
+        alertDialogBuilder.setMessage("Journey has been saved successfully.");
         alertDialogBuilder.setPositiveButton("Close",
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
-                       // Intent intent = new Intent(TransferMilkToMT.this, HomePage.class);
-                        // startActivity(intent);
                         dialog.dismiss();
                         finish();
                     }
@@ -121,4 +120,6 @@ public class TransferMilkToMT extends AppCompatActivity {
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
     }
+
+
 }

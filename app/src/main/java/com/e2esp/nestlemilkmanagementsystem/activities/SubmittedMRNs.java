@@ -2,12 +2,10 @@ package com.e2esp.nestlemilkmanagementsystem.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.StringRes;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -16,7 +14,6 @@ import com.e2esp.nestlemilkmanagementsystem.adapters.SubmittedMRNsAdapter;
 import com.e2esp.nestlemilkmanagementsystem.models.MRNsList;
 
 import java.util.ArrayList;
-import java.util.PriorityQueue;
 
 
 public class SubmittedMRNs extends AppCompatActivity {

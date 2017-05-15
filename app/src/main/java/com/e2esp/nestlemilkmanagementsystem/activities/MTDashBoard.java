@@ -21,7 +21,7 @@ public class MTDashBoard extends Activity {
     private TextView textViewUserType;
     private LinearLayout manageCollectionsMTInnerLayout, manageMRNsMTInnerLayout;
     boolean checked = true;
-    private Button buttonMTCreateMRN, buttonMTViewMRNs,buttonMTPurchaseSummary;
+    private Button buttonMTStartJourney, buttonMTCreateMRN, buttonMTViewMRNs,buttonMTPurchaseSummary;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,7 @@ public class MTDashBoard extends Activity {
         textViewUserType.setText(getResources().getString(R.string.user_mt));
         onManageCollectionsMTButtonClick();
         onManageMRNsMTButtonClick();
+        onMTStartJourneyButtonClick();
         onMTCreateMRNButtonClick();
         onMTViewMRNsButtonClick();
         onMTPurchaseSummaryButtonClick();
@@ -39,6 +40,7 @@ public class MTDashBoard extends Activity {
     private void getReferences(){
         buttonMTManageCollections = (AppCompatButton) findViewById(R.id.buttonMTManageCollections);
         buttonMTManageMRNs = (AppCompatButton) findViewById(R.id.buttonMTManageMRNs);
+        buttonMTStartJourney = (Button) findViewById(R.id.buttonMTStartJourney);
         buttonMTCreateMRN = (Button) findViewById(R.id.buttonMTCreateMRN);
         buttonMTViewMRNs = (Button) findViewById(R.id.buttonMTViewMRNs);
         buttonMTPurchaseSummary = (Button) findViewById(R.id.buttonMTPurchaseSummary);
@@ -80,6 +82,16 @@ public class MTDashBoard extends Activity {
             }
         });
 
+    }
+
+    private void onMTStartJourneyButtonClick(){
+        buttonMTStartJourney.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MTDashBoard.this, StartJourney.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void onMTCreateMRNButtonClick(){

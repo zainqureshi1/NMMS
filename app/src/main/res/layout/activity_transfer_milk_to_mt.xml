@@ -1068,7 +1068,7 @@
 
     </LinearLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/transferMilkBottomButtonsLayOut"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -1081,32 +1081,30 @@
 
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/transferMilkCancelButton"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight=".5"
             android:layout_height="wrap_content"
             android:text="@string/cancel_button"
             android:textColor="@color/black"
             android:textSize="@dimen/text_size_medium"
             android:background="@color/gray_purple"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
             android:layout_marginLeft="@dimen/margin_huge"
             android:layout_marginRight="@dimen/margin_huge"
             android:textAllCaps="false" />
 
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/transferMilkBackButton"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight=".5"
             android:layout_height="wrap_content"
             android:text="@string/transfer_button"
             android:textColor="@color/black"
             android:textSize="@dimen/text_size_medium"
             android:background="@color/gray_purple"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_marginLeft="@dimen/margin_huge"
             android:layout_marginRight="@dimen/margin_huge"
             android:textAllCaps="false" />
 
 
-    </RelativeLayout>
+    </LinearLayout>
 </RelativeLayout>

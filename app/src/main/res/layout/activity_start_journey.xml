@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_plain"
+    tools:context=".activities.StartJourney">
+
+    <include layout="@layout/title_layout"
+        android:id="@+id/includeHeader"/>
+
+    <TextView
+        android:id="@+id/textViewStartJourney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/start_journey"
+        android:textSize="@dimen/text_size_medium_upper"
+        android:textColor="@color/white"
+        android:layout_margin="@dimen/margin_tiny"
+        android:textStyle="bold"
+        android:layout_below="@id/includeHeader"/>
+
+    <LinearLayout
+        android:id="@+id/outterLinearLayoutStartJourney"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textViewStartJourney"
+        android:layout_above="@+id/startJourneyBottomButtonsLayOut"
+        android:background="@color/white"
+        android:layout_marginLeft="@dimen/margin_tiny"
+        android:layout_marginRight="@dimen/margin_tiny">
+
+        <ScrollView
+            android:id="@+id/scrollViewStartJourney"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/innerrLinearLayoutStartJourney"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_tiny_upper"
+                android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/sheetNumSJLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/silver_blue"
+                android:baselineAligned="true"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_tiny_upper">
+
+                <TextView
+                    android:id="@+id/textViewSJSheetNum"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text="@string/sheet_num"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewSelectedSJSheetNum"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".8"
+                    android:hint="@string/selected_sheet_num"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/dark_gray" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dateAndRegionJSLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/silver_blue"
+                    android:baselineAligned="true"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_tiny_upper">
+
+                    <TextView
+                        android:id="@+id/textViewSJDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".2"
+                        android:text="@string/date"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textViewSJDisplayDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".3"
+                        android:hint="@string/dd_mm_yyyy"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/dark_gray" />
+
+                    <TextView
+                        android:id="@+id/textViewJSRegion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".2"
+                        android:text="@string/region"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textViewSelectedJSRegion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".3"
+                        android:hint="@string/selected_region"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/dark_gray" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textViewRouteInformation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/route_info"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textColor="@color/black"
+                    android:layout_margin="@dimen/margin_two_minute"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/routeInformationJSLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/silver_blue"
+                    android:padding="@dimen/padding_tiny_upper">
+
+                    <TextView
+                        android:id="@+id/textViewJSRouteCode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".4"
+                        android:text="@string/route_code"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/editTextJSRouteCode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:hint="@string/selected_route_code"
+                        android:textColorHint="@color/dark_gray"
+                        android:textColor="@color/black"
+                        android:background="@color/white"
+                        android:padding="@dimen/padding_tiny"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_marginRight="@dimen/margin_medium"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/routeNameJSLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/silver_blue"
+                    android:padding="@dimen/padding_tiny_upper">
+
+
+                    <TextView
+                        android:id="@+id/textViewJSRouteName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".4"
+                        android:text="@string/route_name"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/textViewSelectedJSRouteName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:hint="@string/selected_route_name"
+                        android:textColorHint="@color/dark_gray"
+                        android:textColor="@color/black"
+                        android:padding="@dimen/padding_tiny_upper" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textViewVehicleInformation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vehicle_info"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textColor="@color/black"
+                    android:layout_margin="@dimen/margin_two_minute"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/vehicleInformationJSLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/silver_blue"
+                    android:padding="@dimen/padding_tiny_upper">
+
+                    <TextView
+                        android:id="@+id/textViewJSVehicleCode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".4"
+                        android:text="@string/vehicle_code"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/editTextJSVehicleCode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:hint="@string/selected_vehicle_code"
+                        android:textColorHint="@color/dark_gray"
+                        android:textColor="@color/black"
+                        android:background="@color/white"
+                        android:padding="@dimen/padding_tiny"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_marginRight="@dimen/margin_medium"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/vehicleNumberJSLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/silver_blue"
+                    android:padding="@dimen/padding_tiny_upper">
+
+
+                    <TextView
+                        android:id="@+id/textViewJSVehicleNumber"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".4"
+                        android:text="@string/vehicle_number"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/textViewSelectedJSVehicleNumber"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:hint="@string/selected_vehicle_num"
+                        android:textColorHint="@color/dark_gray"
+                        android:textColor="@color/black"
+                        android:padding="@dimen/padding_tiny_upper" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tankerCapacityJSLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/silver_blue"
+                    android:padding="@dimen/padding_tiny_upper">
+
+
+                    <TextView
+                        android:id="@+id/textViewJSTankerCapacity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".4"
+                        android:text="@string/tanker_capacity"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/textViewSelectedJSTankerCapacity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:hint="@string/selected_tanker_capacity"
+                        android:textColorHint="@color/dark_gray"
+                        android:textColor="@color/black"
+                        android:padding="@dimen/padding_tiny_upper" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/startJourneyBottomButtonsLayOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_brown"
+        android:padding="@dimen/padding_tiny_upper"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/margin_tiny"
+        android:layout_marginRight="@dimen/margin_tiny"
+        android:layout_marginBottom="@dimen/margin_tiny">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/startJournyCancelButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/cancel_button"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_medium"
+            android:background="@color/gray_purple"
+            android:layout_marginLeft="@dimen/margin_huge"
+            android:layout_marginStart="@dimen/margin_huge"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:textAllCaps="false"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/startJournySaveButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/save_button"
+            android:textColor="@color/dark_skin"
+            android:textSize="@dimen/text_size_medium"
+            android:background="@drawable/dark_skin_borders"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_huge"
+            android:layout_marginEnd="@dimen/margin_huge"
+            android:textAllCaps="false"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
