@@ -191,4 +191,9 @@
     <string name="tanker_capacity">Tanker Capacity (ton):</string>
     <string name="selected_tanker_capacity">Tanker Capacity</string>
 
+    <string name="location_info">Location Information:</string>
+    <string name="travel_details">Travel Details:</string>
+    <string name="kilometers">Kilometers:</string>
+    <string name="selected_km">Kilometers</string>
+
 </resources>

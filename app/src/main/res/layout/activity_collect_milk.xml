@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_plain"
+    tools:context=".activities.CollectMilk">
+
+    <include layout="@layout/title_layout"
+        android:id="@+id/includeHeader"/>
+
+    <TextView
+        android:id="@+id/collectMilk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/collect_milk"
+        android:textSize="@dimen/text_size_medium_upper"
+        android:textColor="@color/white"
+        android:layout_margin="@dimen/margin_tiny"
+        android:layout_below="@id/includeHeader"
+        android:textStyle="bold" />
+
+
+    <RelativeLayout
+        android:id="@+id/masterDataFirstLayOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="@dimen/padding_tiny_upper"
+        android:layout_below="@id/collectMilk"
+        android:layout_above="@+id/collectMilkBottomButtonsLayOut"
+        android:layout_marginLeft="@dimen/margin_tiny"
+        android:layout_marginRight="@dimen/margin_tiny"
+        android:layout_marginTop="@dimen/margin_tiny"
+        >
+
+        <FrameLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/fragmentContainerCollectMilk"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/collectMilkBottomButtonsLayOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_brown"
+        android:padding="@dimen/padding_tiny_upper"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/margin_tiny"
+        android:layout_marginRight="@dimen/margin_tiny"
+        android:layout_marginBottom="@dimen/margin_tiny">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/collectMilkCancelButton"
+            android:layout_width="0dp"
+            android:layout_weight=".3"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel_button"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_medium"
+            android:background="@color/gray_purple"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:textAllCaps="false" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/collectMilkBackButton"
+            android:layout_width="0dp"
+            android:layout_weight=".3"
+            android:layout_height="wrap_content"
+            android:text="@string/back_button"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_medium"
+            android:background="@color/gray_purple"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:visibility="gone"
+            android:textAllCaps="false" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/collectMilkNextButton"
+            android:layout_width="0dp"
+            android:layout_weight=".3"
+            android:layout_height="wrap_content"
+            android:text="@string/next_button"
+            android:textColor="@color/dark_skin"
+            android:textSize="@dimen/text_size_medium"
+            android:background="@drawable/dark_skin_borders"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:textAllCaps="false" />
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

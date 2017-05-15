@@ -46,7 +46,8 @@
             android:name=".activities.EndOfDay"
             android:screenOrientation="portrait" />
         <activity android:name=".activities.MTDashBoard" />
-        <activity android:name=".activities.StartJourney"></activity>
+        <activity android:name=".activities.StartJourney" />
+        <activity android:name=".activities.CollectMilk"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".fragments.LocationAndTravelDetailsCM">
+
+    <ScrollView
+        android:id="@+id/scrollViewLATDetailsCM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutLATDetailsCM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/sheetNumLATDetailsCMLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/silver_blue"
+                android:padding="@dimen/padding_tiny_upper"
+                android:baselineAligned="true">
+
+                <TextView
+                    android:id="@+id/textViewSheetNumLATDetailsCM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text="@string/sheet_num"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textViewSelectedSheetNumLATDetailsCM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".8"
+                    android:hint="@string/selected_sheet_num"
+                    android:textColorHint="@color/dark_gray"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dateTimeLATDetailsCMLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/silver_blue"
+                android:padding="@dimen/padding_tiny_upper">
+
+                <TextView
+                    android:id="@+id/textViewDateLATDetailsCM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_weight=".2" />
+
+                <TextView
+                    android:id="@+id/textViewDisplayDateLATDetailsCM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/dd_mm_yyyy"
+                    android:textColorHint="@color/dark_gray"
+                    android:textColor="@color/black"
+                    android:layout_weight=".3" />
+
+                <TextView
+                    android:id="@+id/textViewTimeLATDetailsCM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/time"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_weight=".2" />
+
+                <TextView
+                    android:id="@+id/textViewDisplayTimeLATDetailsCM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hr_min_sec"
+                    android:textColorHint="@color/dark_gray"
+                    android:textColor="@color/black"
+                    android:layout_weight=".3" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/regionLATDetailsCMLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/silver_blue"
+                android:padding="@dimen/padding_tiny_upper">
+
+                <TextView
+                    android:id="@+id/textViewRegionLATDetailsCM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text="@string/region"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textViewSelectedRegionLATDetailsCM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".8"
+                    android:hint="@string/selected_region"
+                    android:textColorHint="@color/dark_gray"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textViewLocationInformationCM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/location_info"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/black"
+                android:layout_margin="@dimen/margin_two_minute"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/locationInformationCMLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/silver_blue"
+                android:padding="@dimen/padding_tiny_upper">
+
+                <TextView
+                    android:id="@+id/textViewCMLocationCode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:text="@string/location_code"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/editTextCMLocationCode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:hint="@string/selected_location_code"
+                    android:textColorHint="@color/dark_gray"
+                    android:textColor="@color/black"
+                    android:background="@color/white"
+                    android:padding="@dimen/padding_tiny"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/locationNameCMLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/silver_blue"
+                android:padding="@dimen/padding_tiny_upper">
+
+
+                <TextView
+                    android:id="@+id/textViewCMLocationName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:text="@string/route_name"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textViewSelectedCMLocationName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:hint="@string/selected_route_name"
+                    android:textColorHint="@color/dark_gray"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/padding_tiny_upper" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewTravelDetailsCM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/travel_details"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/black"
+                android:layout_margin="@dimen/margin_two_minute"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/KilometersCMLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/silver_blue"
+                android:paddingTop="@dimen/padding_tiny_upper"
+                android:paddingLeft="@dimen/padding_tiny_upper"
+                android:paddingRight="@dimen/padding_tiny_upper"
+                android:paddingBottom="@dimen/padding_medium">
+
+                <TextView
+                    android:id="@+id/textViewCMKilometers"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:text="@string/kilometers"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/editTextCMKilometers"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:hint="@string/selected_km"
+                    android:textColorHint="@color/dark_gray"
+                    android:textColor="@color/black"
+                    android:background="@color/white"
+                    android:padding="@dimen/padding_tiny"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+

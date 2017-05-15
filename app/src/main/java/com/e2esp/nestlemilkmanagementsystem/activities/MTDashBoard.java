@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.e2esp.nestlemilkmanagementsystem.R;
+import com.e2esp.nestlemilkmanagementsystem.fragments.LocationAndTravelDetailsCM;
 
 import java.util.PriorityQueue;
 
@@ -21,7 +22,8 @@ public class MTDashBoard extends Activity {
     private TextView textViewUserType;
     private LinearLayout manageCollectionsMTInnerLayout, manageMRNsMTInnerLayout;
     boolean checked = true;
-    private Button buttonMTStartJourney, buttonMTCreateMRN, buttonMTViewMRNs,buttonMTPurchaseSummary;
+    private Button buttonMTStartJourney, buttonMTCollectMilk, buttonMTViewListOfCollections, buttonMTPickupRejectedMilk,
+            buttonMTEndJourney, buttonMTViewListOfJourneys, buttonMTCreateMRN, buttonMTViewMRNs,buttonMTPurchaseSummary;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,15 +34,27 @@ public class MTDashBoard extends Activity {
         onManageCollectionsMTButtonClick();
         onManageMRNsMTButtonClick();
         onMTStartJourneyButtonClick();
+        onMTCollectMilkButtonClick();
+
         onMTCreateMRNButtonClick();
         onMTViewMRNsButtonClick();
         onMTPurchaseSummaryButtonClick();
     }
 
     private void getReferences(){
+
+        ////ManageCollections Portion Buttons
         buttonMTManageCollections = (AppCompatButton) findViewById(R.id.buttonMTManageCollections);
-        buttonMTManageMRNs = (AppCompatButton) findViewById(R.id.buttonMTManageMRNs);
         buttonMTStartJourney = (Button) findViewById(R.id.buttonMTStartJourney);
+        buttonMTCollectMilk = (Button) findViewById(R.id.buttonMTCollectMilk);
+        buttonMTViewListOfCollections = (Button) findViewById(R.id.buttonMTViewListOfCollections);
+        buttonMTPickupRejectedMilk = (Button) findViewById(R.id.buttonMTPickupRejectedMilk);
+        buttonMTEndJourney = (Button) findViewById(R.id.buttonMTEndJourney);
+        buttonMTViewListOfJourneys = (Button) findViewById(R.id.buttonMTViewListOfJourneys);
+
+
+        //ManageMRNs Portion Buttons
+        buttonMTManageMRNs = (AppCompatButton) findViewById(R.id.buttonMTManageMRNs);
         buttonMTCreateMRN = (Button) findViewById(R.id.buttonMTCreateMRN);
         buttonMTViewMRNs = (Button) findViewById(R.id.buttonMTViewMRNs);
         buttonMTPurchaseSummary = (Button) findViewById(R.id.buttonMTPurchaseSummary);
@@ -89,6 +103,16 @@ public class MTDashBoard extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MTDashBoard.this, StartJourney.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void onMTCollectMilkButtonClick(){
+        buttonMTCollectMilk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MTDashBoard.this, CollectMilk.class);
                 startActivity(intent);
             }
         });
