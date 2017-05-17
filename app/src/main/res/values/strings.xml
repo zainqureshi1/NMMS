@@ -196,4 +196,10 @@
     <string name="kilometers">Kilometers:</string>
     <string name="selected_km">Kilometers</string>
 
+    <string name="rejection_question">Is milk being rejected?</string>
+    <string name="rejection_type">Type of rejection?</string>
+    <string name="full">Full</string>
+    <string name="partial">Partial</string>
+    <string name="rejected_milk_quantity">Rejected Milk Quantity</string>
+
 </resources>

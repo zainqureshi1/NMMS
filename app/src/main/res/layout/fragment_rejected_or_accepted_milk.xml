@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragments.RejectedOrAcceptedMilk">
+
+    <ScrollView
+        android:id="@+id/rejectionQuestionScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/rejectionQuestionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textViewRejectionQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/silver_blue"
+        android:text="@string/rejection_question"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/margin_tiny_upper"
+        android:padding="@dimen/padding_tiny_upper"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupRejectionQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/silver_blue"
+        android:paddingLeft="@dimen/padding_tiny_upper"
+        android:paddingRight="@dimen/padding_tiny_upper">
+
+        <RadioButton
+            android:id="@+id/radioButtonYesRQ"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+            android:text="@string/yes"
+            android:textColor="@color/black" />
+
+        <RadioButton
+            android:id="@+id/radioButtonNoRQ"
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:layout_height="match_parent"
+            android:text="@string/no"
+            android:textColor="@color/black" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/rejectionTypeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+        android:id="@+id/textViewRejectionType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/silver_blue"
+        android:text="@string/rejection_question"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/margin_small"
+        android:padding="@dimen/padding_tiny_upper"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupRejectionType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/silver_blue"
+        android:paddingLeft="@dimen/padding_tiny_upper"
+        android:paddingRight="@dimen/padding_tiny_upper">
+
+        <RadioButton
+            android:id="@+id/radioButtonFullRT"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+            android:text="@string/full"
+            android:textColor="@color/black" />
+
+        <RadioButton
+            android:id="@+id/radioButtonPartialRT"
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:layout_height="match_parent"
+            android:text="@string/partial"
+            android:textColor="@color/black" />
+
+    </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rejectedMilkQuantityLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/textViewRejectedMilkQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/rejected_milk_quantity"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/black"
+        android:layout_margin="@dimen/margin_two_minute"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/volumeRMQLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/silver_blue"
+        android:padding="@dimen/padding_tiny_upper">
+
+        <TextView
+            android:id="@+id/textViewVolumeRMQ"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".4"
+            android:text="@string/volume"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/editTextVolumeRMQ"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:hint="@string/volume_range"
+            android:textColorHint="@color/gray_purple"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:inputType="numberSigned|numberDecimal"
+            android:padding="@dimen/padding_tiny" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fatRMQLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/silver_blue"
+        android:padding="@dimen/padding_tiny_upper">
+
+        <TextView
+            android:id="@+id/textViewFatRMQ"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".4"
+            android:text="@string/fat"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/editTextFatRMQ"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:hint="@string/fat_range"
+            android:textColorHint="@color/gray_purple"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:inputType="number|numberDecimal"
+            android:padding="@dimen/padding_tiny"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lrReadingRMQLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/silver_blue"
+        android:padding="@dimen/padding_tiny_upper">
+
+        <TextView
+            android:id="@+id/textViewLRReadingRMQ"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".4"
+            android:text="@string/lr_reading"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/editTextLRReadingRMQ"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:hint="@string/lr_reading_range"
+            android:textColorHint="@color/gray_purple"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:inputType="number|numberDecimal"
+            android:padding="@dimen/padding_tiny"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/temperatureRMQLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/silver_blue"
+        android:padding="@dimen/padding_tiny_upper">
+
+        <TextView
+            android:id="@+id/textViewTemperatureRMQ"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".4"
+            android:text="@string/temperature"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/editTextTemperatureRMQ"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:hint="@string/temperature_range"
+            android:textColorHint="@color/gray_purple"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:inputType="number|numberDecimal"
+            android:padding="@dimen/padding_tiny" />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
